@@ -6,12 +6,12 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/26 11:53:17 by susivagn          #+#    #+#             */
-/*   Updated: 2017/10/30 17:56:18 by susivagn         ###   ########.fr       */
+/*   Updated: 2017/10/30 19:46:35 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/*
 int ft_strclen(const char *s, char c)
 {
     int i;
@@ -170,4 +170,21 @@ int get_next_line(const int fd, char **line)
     fdr = open("./patapon", O_CREAT | O_RDWR | O_APPEND, 0666);
     dprintf(fdr, "n ===== %d\n", n);
     return (n = (n > 0) ? 1 : n);
+}*/
+
+int get_next_line(const int fd, char **line)
+{
+    static char     *tmp;
+
+    if (fd <= 0 || !(*line) || BUFF_SIZE <= 0)
+        return (-1);
+    *line = ft_strnew(BUFF_SIZE + 1, '\0');
+    if (!tmp)
+    {
+
+    }
+    else
+    {
+        
+    }
 }
