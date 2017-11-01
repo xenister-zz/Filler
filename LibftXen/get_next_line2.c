@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/26 11:53:17 by susivagn          #+#    #+#             */
-/*   Updated: 2017/10/30 19:46:35 by susivagn         ###   ########.fr       */
+/*   Updated: 2017/11/01 15:47:06 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -175,16 +175,20 @@ int get_next_line(const int fd, char **line)
 int get_next_line(const int fd, char **line)
 {
     static char     *tmp;
+    int             n;
 
     if (fd <= 0 || !(*line) || BUFF_SIZE <= 0)
         return (-1);
     *line = ft_strnew(BUFF_SIZE + 1, '\0');
+    tmp = ft_strnew(BUFF_SIZE + 1, '\0');
     if (!tmp)
     {
+        //n = read_line(tmp, line, fd);
 
     }
     else
     {
         
     }
+    return (0);
 }
