@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/12 18:43:23 by susivagn          #+#    #+#             */
-/*   Updated: 2016/12/12 19:48:30 by susivagn         ###   ########.fr       */
+/*   Updated: 2017/11/01 18:49:19 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,7 @@ int		ft_strclen(const char *s, char c)
 	i = 0;
 	while (s[i] && s[i] != c)
 		i++;
-	return (i);
+	if (s[i] == c)
+		return (i);
+	return (-1);
 }

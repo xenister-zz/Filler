@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 18:21:39 by susivagn          #+#    #+#             */
-/*   Updated: 2017/10/26 17:53:41 by susivagn         ###   ########.fr       */
+/*   Updated: 2017/11/01 18:45:49 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ int     main ()
         dprintf(fd, "%s\n", line);
         dprintf(1, "8 2\n");
     }
-    return(0);
+    return (0);
 }

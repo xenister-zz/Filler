@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/26 11:53:17 by susivagn          #+#    #+#             */
-/*   Updated: 2017/11/01 15:47:06 by susivagn         ###   ########.fr       */
+/*   Updated: 2017/11/01 20:48:49 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -172,23 +172,47 @@ int get_next_line(const int fd, char **line)
     return (n = (n > 0) ? 1 : n);
 }*/
 
-int get_next_line(const int fd, char **line)
+int get_next_line2(const int fd, char **line)
 {
     static char     *tmp;
     int             n;
+    int             c;
 
     if (fd <= 0 || !(*line) || BUFF_SIZE <= 0)
         return (-1);
     *line = ft_strnew(BUFF_SIZE + 1, '\0');
-    tmp = ft_strnew(BUFF_SIZE + 1, '\0');
     if (!tmp)
     {
-        //n = read_line(tmp, line, fd);
+        tmp = ft_strnew(BUFF_SIZE + 1, '\0');
+        while ((n = read(fd, tmp, BUFF_SIZE)) > 0)
+        {
+            if ((c = ft_strclen(tmp, '\n')) != -1)
+            {
+                if (c != 0)
+                    *line = ft_strsub(tmp, 0, c + 1);
+            }
+            else
+            {
+                *line = ft_append(line, tmp, 0);
+            }
+        }
 
     }
     else
     {
         
     }
+    return (0);
+}
+
+int main(void)
+    {
+    char    *line;
+    int     fd;
+
+    fd = open("./pate", O_RDWR, O_TRUNC, 0666);
+    while (get_next_line2(fd, &line))
+    printf("STRAT\n");
+    printf("s = %s\n", line);
     return (0);
 }
