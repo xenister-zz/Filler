@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 14:16:30 by susivagn          #+#    #+#             */
-/*   Updated: 2017/10/30 17:58:26 by susivagn         ###   ########.fr       */
+/*   Updated: 2017/11/02 17:05:07 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # include <unistd.h>
 # include <limits.h>
 
-#define BUFF_SIZE 10
+#define BUFF_SIZE 100
 #define NX navi->next
 #define NCF ((t_lol *)(navi)->content)->fdi
 #define BB buffer->buff
