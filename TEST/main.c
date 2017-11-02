@@ -66,14 +66,14 @@ int get_next_line2(const int fd, char **line)
                 if (c != 0)
                 {
                     *line = ft_append(*line, ft_strsub(tmp, 0, c), 1);
-                    //ft_memmove(tmp, &tmp[c + 1], (ft_strlen(tmp) - (c)));
-                    tmp = ft_strdup(&tmp[c + 1], 0);
+                    ft_memmove(tmp, &tmp[c + 1], (ft_strlen(tmp) - (c)));
+                    //tmp = ft_strdup(&tmp[c + 1], 0);
                     return (n);
                 }
                 else if (c == 0)
                 {
-                    //ft_memmove(tmp, &tmp[c + 1], (ft_strlen(tmp) - (c)));
-                    tmp = ft_strdup(&tmp[c + 1], 0);
+                    ft_memmove(tmp, &tmp[c + 1], (ft_strlen(tmp) - (c)));
+                    //tmp = ft_strdup(&tmp[c + 1], 0);
                     return (n);
                 }
             }
@@ -87,8 +87,8 @@ int get_next_line2(const int fd, char **line)
     {
         n = ft_strlen(tmp);
         *line = ft_append(*line, ft_strsub(tmp, 0, c), 1);
-        tmp = ft_strdup(&tmp[c + 1], 0);
-        //ft_memmove(tmp, &tmp[c + 1], n - (c));
+        //tmp = ft_strdup(&tmp[c + 1], 0);
+        ft_memmove(tmp, &tmp[c + 1], n - (c));
     }
     return (n);
 }
