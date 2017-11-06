@@ -65,6 +65,7 @@ int get_next_line2(const int fd, char **line)
             {
                 if (c != 0)
                 {
+                    printf("ok1\n");
                     *line = ft_append(*line, ft_strsub(tmp, 0, c), 1);
                     ft_memmove(tmp, &tmp[c + 1], (ft_strlen(tmp) - (c)));
                     //tmp = ft_strdup(&tmp[c + 1], 0);
@@ -72,6 +73,7 @@ int get_next_line2(const int fd, char **line)
                 }
                 else if (c == 0)
                 {
+                    printf("ok2\n");
                     ft_memmove(tmp, &tmp[c + 1], (ft_strlen(tmp) - (c)));
                     //tmp = ft_strdup(&tmp[c + 1], 0);
                     return (n);
@@ -79,17 +81,20 @@ int get_next_line2(const int fd, char **line)
             }
             else
             {
+                printf("ok3\n");
                 *line = ft_append(*line, tmp, 1);
             }
         }
     }
     else if (tmp && ((c = ft_strclen(tmp, '\n')) != -1))
     {
+        printf("ok4\n");
         n = ft_strlen(tmp);
         *line = ft_append(*line, ft_strsub(tmp, 0, c), 1);
         //tmp = ft_strdup(&tmp[c + 1], 0);
         ft_memmove(tmp, &tmp[c + 1], n - (c));
     }
+    printf("TMP == %s\n", tmp);
     return (n);
 }
 

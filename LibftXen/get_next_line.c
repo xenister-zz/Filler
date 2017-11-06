@@ -6,12 +6,11 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/07 18:24:13 by susivagn          #+#    #+#             */
-/*   Updated: 2017/11/02 19:28:32 by susivagn         ###   ########.fr       */
+/*   Updated: 2017/11/06 17:20:59 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 int ft_strclen(const char *s, char c)
 {
@@ -132,7 +131,7 @@ int ft_getline(t_lol *buffer, char **line, int fd)
             *line = ft_append(*line, BB, 1);
             BB[0] = '\0';
         }
-        if (n < BUFF_SIZE)
+        if (n == -1)
             break;
     }
     n = (n == 0 && d == 0) ? ft_strlen(*line) : n;
@@ -145,7 +144,6 @@ int get_next_line(const int fd, char **line)
     t_list *navi;
     t_lol *rest;
     int n;
-    int fdr;
 
     rest = 0;
     if (fd < 0 || !line)
@@ -164,65 +162,62 @@ int get_next_line(const int fd, char **line)
     if (n == -1 || n == 0)
     {
         ft_delstructlst(&base, fd);
-        fdr = open("./pataponey", O_CREAT | O_RDWR | O_APPEND, 0666);
-        dprintf(fdr, "n fail ===== %d\n", n);
         return (n);
     }
-    fdr = open("./patapon", O_CREAT | O_RDWR | O_APPEND, 0666);
-    dprintf(fdr, "n ===== %d\n", n);
     return (n = (n > 0) ? 1 : n);
 }
 
-int get_next_line(const int fd, char **line)
-{
-	static char *tmp;
-	int n;
-	int c;
+// int get_next_line2(const int fd, char **line)
+// {
+// 	static char *tmp;
+// 	int n;
+// 	int c;
 
-	n = 0;
-	c = 0;
-	if (fd < 0 || !(*line) || BUFF_SIZE <= 0)
-		return (-1);
-	*line = ft_strnew(BUFF_SIZE + 1, '\0');
-	if (!tmp || (tmp && (ft_strclen(tmp, '\n') == -1)))
-	{
-		if (!tmp)
-			tmp = ft_strnew(BUFF_SIZE + 1, '\0');
-		if ((c = ft_strclen(tmp, '\n')) == -1)
-		{
-			*line = ft_append(*line, tmp, 1);
-		}
-		while ((n = read(fd, tmp, BUFF_SIZE)) > 0)
-		{
-
-			if ((c = ft_strclen(tmp, '\n')) != -1)
-			{
-				if (c != 0)
-				{
-					*line = ft_append(*line, ft_strsub(tmp, 0, c), 1);
-					ft_memmove(tmp, &tmp[c + 1], (ft_strlen(tmp) - (c)));
-					//tmp = ft_strdup(&tmp[c + 1], 0);
-					return (n);
-				}
-				else if (c == 0)
-				{
-					ft_memmove(tmp, &tmp[c + 1], (ft_strlen(tmp) - (c)));
-					//tmp = ft_strdup(&tmp[c + 1], 0);
-					return (n);
-				}
-			}
-			else
-			{
-				*line = ft_append(*line, tmp, 1);
-			}
-		}
-	}
-	else if (tmp && ((c = ft_strclen(tmp, '\n')) != -1))
-	{
-		n = ft_strlen(tmp);
-		*line = ft_append(*line, ft_strsub(tmp, 0, c), 1);
-		//tmp = ft_strdup(&tmp[c + 1], 0);
-		ft_memmove(tmp, &tmp[c + 1], n - (c));
-	}
-	return (n);
-}
+// 	n = 0;
+// 	c = 0;
+// 	if (fd < 0 || !(*line) || BUFF_SIZE <= 0)
+// 		return (-1);
+// 	*line = ft_strnew(BUFF_SIZE + 1, '\0');
+// 	if (!tmp || (tmp && (ft_strclen(tmp, '\n') == -1)))
+// 	{
+// 		if (!tmp)
+// 			tmp = ft_strnew(BUFF_SIZE + 1, '\0');
+// 		if ((c = ft_strclen(tmp, '\n')) == -1)
+// 		{
+// 			*line = ft_append(*line, tmp, 1);
+// 		}
+// 		while ((n = read(fd, tmp, BUFF_SIZE)) > 0)
+// 		{
+// 			if ((c = ft_strclen(tmp, '\n')) != -1)
+// 			{
+// 				if (c != 0)
+// 				{
+// 					*line = ft_append(*line, ft_strsub(tmp, 0, c), 1);
+// 					ft_memmove(tmp, &tmp[c + 1], (ft_strlen(tmp) - (c)));
+// 					//tmp = ft_strdup(&tmp[c + 1], 0);
+// 					return (n);
+// 				}
+// 				else if (c == 0)
+// 				{
+// 					ft_memmove(tmp, &tmp[c + 1], (ft_strlen(tmp) - (c)));
+// 					//tmp = ft_strdup(&tmp[c + 1], 0);
+// 					return (n);
+// 				}
+// 			}
+// 			else
+// 			{
+// 				*line = ft_append(*line, tmp, 1);
+// 			}
+// 		}
+// 	}
+// 	else if (tmp && ((c = ft_strclen(tmp, '\n')) != -1))
+// 	{
+// 		n = ft_strlen(tmp);
+// 		*line = ft_append(*line, ft_strsub(tmp, 0, c), 1);
+// 		//tmp = ft_strdup(&tmp[c + 1], 0);
+// 		ft_memmove(tmp, &tmp[c + 1], n - (c));
+//     }
+//     if (n == 0 || n == -1)
+//         free(tmp);
+//     return (n = (n > 0) ? 1 : n);
+// }
