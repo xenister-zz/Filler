@@ -6,58 +6,11 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/07 18:24:13 by susivagn          #+#    #+#             */
-/*   Updated: 2017/11/06 17:20:59 by susivagn         ###   ########.fr       */
+/*   Updated: 2017/11/07 16:52:39 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int ft_strclen(const char *s, char c)
-{
-    int i;
-
-    i = 0;
-    while (s[i] && s[i] != c)
-        i++;
-    return (i);
-}
-
-char *ft_strnew(size_t size, char c)
-{
-    return (ft_memalloc((size + 1), c));
-}
-
-void *ft_memalloc(size_t size, char c)
-{
-    void *mem;
-
-    if (!(mem = malloc(size)))
-        return (NULL);
-    ft_memset(mem, c, size);
-    return (mem);
-}
-
-char *ft_append(char *s1, char *s2, int b)
-{
-    int c;
-    char *str;
-
-    str = NULL;
-    if (!s1 && !s2)
-        return (str);
-    c = (ft_strlen(s1) + ft_strlen(s2));
-    str = ft_strnew(c, '\0');
-    if (!str)
-        return (NULL);
-    c = 0;
-    str = ft_strcpy(str, s1);
-    str = ft_strncat(str, s2, ft_strlen(s2));
-    if (b == 1)
-        free(s1);
-    if (b == 2)
-        free(s2);
-    return (str);
-}
 
 void ft_delstructlst(t_list **lst, int fd)
 {
