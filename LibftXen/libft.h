@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 14:16:30 by susivagn          #+#    #+#             */
-/*   Updated: 2017/11/06 17:32:32 by susivagn         ###   ########.fr       */
+/*   Updated: 2017/11/10 17:39:14 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -141,5 +141,7 @@ int				ft_size_unicode(int c);
 int				ft_count_char(char *src, char c);
 int				ft_no_encounter_index(char *str, char *caras);
 int 			get_next_line(const int fd, char **line);
+char 			**ft_addtable(char **table, char *toadd);
+int 			ft_print_table(char **table, int newline);
 
 #endif

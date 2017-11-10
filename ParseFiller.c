@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 18:21:39 by susivagn          #+#    #+#             */
-/*   Updated: 2017/11/07 17:56:11 by susivagn         ###   ########.fr       */
+/*   Updated: 2017/11/10 15:25:23 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,7 @@ int     main ()
     line = NULL;
     while ((ft_filler_read(fdr, info)) > 0)
     {
-        //dprintf(fdr, "%s\n", line);
-        
-        dprintf(1, "8 2\n");
+        ft_printf("Started\n");
     }
     return (0);
 }

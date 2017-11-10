@@ -112,29 +112,19 @@
 // }
 
 #include <unistd.h>
-
-void ft_putchar(char c)
-{
-    write(1, &c, 1);
-}
-
-void ft_putnbr(int nb)
-{
-    if (nb > 9)
-    {
-        ft_putnbr(nb / 10);
-        ft_putnbr(nb % 10);
-    }
-    else
-    {
-        ft_putchar('0' + nb);
-    }
-}
+#include "../LibftXen/libft.h"
 
 int main(int argc, char **argv)
 {
-    (void)argv;
-    ft_putnbr(argc - 1);
-    ft_putchar('\n');
+    char    **tabel;
+    char    *str;
+    char    *str2;
+    
+    tabel = NULL;
+    str = ft_strdup("un string pas comme les autre", 0);
+    str2 = ft_strdup("un string comme les autre", 0);
+    tabel = ft_addtable(tabel, str);
+    tabel = ft_addtable(tabel, str2);
+    ft_print_table(tabel, 0);
     return (0);
 }
