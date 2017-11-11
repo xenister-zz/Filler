@@ -123,8 +123,17 @@ int main(int argc, char **argv)
     tabel = NULL;
     str = ft_strdup("un string pas comme les autre", 0);
     str2 = ft_strdup("un string comme les autre", 0);
-    tabel = ft_addtable(tabel, str);
-    tabel = ft_addtable(tabel, str2);
-    ft_print_table(tabel, 0);
+    tabel = ft_addtable(tabel, "kgsdfjl jjlvsd sdoifjsdfs", 9);
+    tabel = ft_addtable(tabel, "kgsdfjl jjlvsd sdoifjsdfs", 2);
+    tabel = ft_addtable(tabel, "kgsdfjl jjlvsd sdoifjsdfs", 2);
+    tabel = ft_addtable(tabel, "kgsdfjl jjlvsd sdoifjsdfs", 2);
+    tabel = ft_addtable(tabel, "kgsdfjl jjlvsd sdoifjsdfs", 2);
+    tabel = ft_addtable(tabel, "kgsdfjl jjlvsd sdoifjsdfs", 2);
+    tabel = ft_addtable(tabel, "kgsdfjl jjlvsd sdoifjsdfs", 2);
+    tabel = ft_addtable(tabel, str, 2);
+    tabel = ft_addtable(tabel, str2, 2);
+    free(str);
+    printf("dfs = = %s", str);
+    ft_print_table(tabel, 1);
     return (0);
 }
