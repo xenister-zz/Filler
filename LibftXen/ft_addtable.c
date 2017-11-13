@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 16:03:48 by susivagn          #+#    #+#             */
-/*   Updated: 2017/11/11 21:03:58 by susivagn         ###   ########.fr       */
+/*   Updated: 2017/11/13 14:37:44 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,22 +17,22 @@ char        **ft_addtable(char **table, char *toadd, int size)
     int     i;
 
     i = 0;
-    ft_putstr("Strat addtable\n");
-    ft_putendl(toadd);
+    //ft_putstr("Strat addtable\n");
+    //ft_putendl(toadd);
     if (!toadd)
         return (table);
     if (!table)
     {
-        printf("***je creer***\n");
+        //printf("***je creer***\n");
         table = (char**)ft_memalloc((size + 1) * (sizeof(char*)), '\0');
         table[size] = NULL;
     }
     while(table[i] && (table[i][0] != '\0'))
         i++;
     table[i] = toadd;
-    printf("i = %d\n", i);
-    printf("%s", table[i]);
-    ft_putstr("Ned addtable\n");
+    //printf("i = %d\n", i);
+    //printf("%s", table[i]);
+    //ft_putstr("Ned addtable\n");
     return (table);
 }
 
