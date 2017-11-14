@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 14:59:25 by susivagn          #+#    #+#             */
-/*   Updated: 2017/11/13 16:57:16 by susivagn         ###   ########.fr       */
+/*   Updated: 2017/11/14 16:30:01 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,10 +94,5 @@ int     ft_filler_read(int fdr, t_info *info)
     {
         dprintf(fdr, "%s\n", info->piece[boo++]);
     }
-    return (0);
-}
-
-int     ft_filler_resolve(t_info *info)
-{
     return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 18:21:39 by susivagn          #+#    #+#             */
-/*   Updated: 2017/11/13 16:14:18 by susivagn         ###   ########.fr       */
+/*   Updated: 2017/11/14 16:28:06 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ int     main ()
     info->board = NULL;
     line = NULL;
     ft_filler_read(fdr, info);
-    printf("8 2\n");
+    ft_play_filler(info);
     return (0);
 }
