@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 18:21:39 by susivagn          #+#    #+#             */
-/*   Updated: 2017/11/14 16:28:06 by susivagn         ###   ########.fr       */
+/*   Updated: 2017/11/16 17:20:46 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int     main ()
 {
-    int     fdr = open("./patate", O_CREAT | O_RDWR | O_TRUNC, 0666);
+    int     fdr = open("./patate", O_CREAT | O_RDWR | O_APPEND, 0666);
     char    *line;
     int     i;
     t_info  *info;
@@ -26,6 +26,8 @@ int     main ()
     info->board = NULL;
     line = NULL;
     ft_filler_read(fdr, info);
-    ft_play_filler(info);
+    //ft_play_filler(info);
+    printf("8 2\n");
+    
     return (0);
 }

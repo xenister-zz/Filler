@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 15:04:04 by susivagn          #+#    #+#             */
-/*   Updated: 2017/11/11 19:19:31 by susivagn         ###   ########.fr       */
+/*   Updated: 2017/11/16 20:23:57 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,21 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 
+#define Iboard info->board
+#define Ipiece info->piece
+#define Ix info->x
+#define Iy info->y
+#define IOK info->ok
+
 typedef struct  s_info
 {
+    int     ok;
     int     player;
     char    **piece;
     int     x;
     int     y;
+    int     marginx;
+    int     marginy;
     char    **board;
 }               t_info;
 

@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 14:59:25 by susivagn          #+#    #+#             */
-/*   Updated: 2017/11/14 16:30:01 by susivagn         ###   ########.fr       */
+/*   Updated: 2017/11/16 17:50:31 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ void ft_get_piece(int fd, char *line, t_info *info)
         if (i == size)
             break;
     }
+
 }
 
 int     ft_filler_read(int fdr, t_info *info)
