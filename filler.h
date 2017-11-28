@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 15:04:04 by susivagn          #+#    #+#             */
-/*   Updated: 2017/11/16 20:23:57 by susivagn         ###   ########.fr       */
+/*   Updated: 2017/11/28 18:47:15 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,9 @@
 #define Ix info->x
 #define Iy info->y
 #define IOK info->ok
+#define Mar info->margin
+#define Mx info->marginx
+#define My info->marginy
 
 typedef struct  s_info
 {
@@ -31,6 +34,8 @@ typedef struct  s_info
     char    **piece;
     int     x;
     int     y;
+    int     score;
+    int     margin;
     int     marginx;
     int     marginy;
     char    **board;
@@ -39,5 +44,6 @@ typedef struct  s_info
 void            ft_get_player(char *line, t_info *info);
 int             ft_filler_read(int fdr, t_info *info);
 void            ft_get_board(int fd, char *line, t_info *info);
+void            ft_get_piece(int fd, char *line, t_info *info);
 
 #endif
