@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 15:04:04 by susivagn          #+#    #+#             */
-/*   Updated: 2017/11/28 18:47:15 by susivagn         ###   ########.fr       */
+/*   Updated: 2017/11/29 15:14:27 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@
 typedef struct  s_info
 {
     int     ok;
+    int     okcount;
     int     player;
     char    **piece;
     int     x;
@@ -45,5 +46,8 @@ void            ft_get_player(char *line, t_info *info);
 int             ft_filler_read(int fdr, t_info *info);
 void            ft_get_board(int fd, char *line, t_info *info);
 void            ft_get_piece(int fd, char *line, t_info *info);
+int             ft_play_filler(t_info *info);
+int             ft_if_valide(int y, int x, t_info *info);
+int             ft_check_piece_pos(t_info *info);
 
 #endif

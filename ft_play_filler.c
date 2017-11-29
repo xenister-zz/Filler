@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 16:31:06 by susivagn          #+#    #+#             */
-/*   Updated: 2017/11/28 18:56:47 by susivagn         ###   ########.fr       */
+/*   Updated: 2017/11/29 15:15:09 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,44 +14,44 @@
 
 int     ft_if_valide(int y, int x, t_info *info)
 {
-    int     ok;
-
-    ok == 0;
     if (!Iboard[Iy + (y - My)][Ix + (x - Mx)] || 
-        !Iboard[Iy + (y - My)][Ix + (x - Mx)] == 'X')
+        Iboard[Iy + (y - My)][Ix + (x - Mx)] == 'X')
         return (0);
     if (Iboard[Iy + (y - My)][Ix + (x - Mx)] == 'O')
-        ok++;
+        info->okcount++;
+    if (info->okcount > 1 || info->okcount < 1)
+        return (0);
     if (Iboard[Iy + (y - My)][Ix + (x - Mx)] == '.')
-        return (ok);
+        return (1);
+    return (0);
 }
 
 int     ft_check_piece_pos(t_info *info)
 {
     int     x;
     int     y;
-    int     ok;
 
     y = 0;
-    ok = 1;
-    while (Ipiece[y] && ok == 1)
+    info->ok = 1;
+    info->okcount = 0;
+    while (Ipiece[y] && info->ok == 1)
     {
         x = 0;
-        while (Ipiece[x] && ok == 1)
+        while (Ipiece[x] && info->ok == 1)
         {
-            if (Ipiece[y][x] == '.')
-                x++;
             if (Mar == 0 && (Ipiece[y][x] == '*'))
             {
                 Mar = 1;
                 Mx = x;
                 My = y;
             }
-            if ((Ipiece[y][x] == '*'))
+            if ((Ipiece[y][x] == '*') && (ft_if_valide(y, x, info) != 1))
+                return (0);
+            x++;
         }
         y++;
     }
-
+    return(1);
 }
 
 int     ft_check_pos();
@@ -68,11 +68,12 @@ int    ft_play_filler(t_info *info)
         info->x = 0;
         while (Iboard[Iy][Ix])
         {
-            ft_check_piece_pos(info);
-
-            ft_check_pos();
+            if (ft_check_piece_pos(info) == 1)
+                return (1);
+            //ft_check_pos();
             Ix++;
         }
         Iy++;
     }
+    return(1);
 }
