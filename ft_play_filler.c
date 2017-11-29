@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 16:31:06 by susivagn          #+#    #+#             */
-/*   Updated: 2017/11/29 15:15:09 by susivagn         ###   ########.fr       */
+/*   Updated: 2017/11/29 20:14:15 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,11 @@ int     ft_check_piece_pos(t_info *info)
     y = 0;
     info->ok = 1;
     info->okcount = 0;
-    while (Ipiece[y] && info->ok == 1)
+    dprintf(info->fds, "strat NTM\n");
+    while (Ipiece[y])
     {
         x = 0;
-        while (Ipiece[x] && info->ok == 1)
+        while (Ipiece[x])
         {
             if (Mar == 0 && (Ipiece[y][x] == '*'))
             {
@@ -56,20 +57,27 @@ int     ft_check_piece_pos(t_info *info)
 
 int     ft_check_pos();
 
-int    ft_play_filler(t_info *info)
+int     chauffage();
+
+int    ft_play_filler(int fdr, t_info *info)
 {
     int     i;
 
     i = 0;
     info->y = 0;
     info->margin = 0;
+    info->fds = fdr;
+    dprintf(fdr, "strat while\n");
     while (Iboard[Iy])
     {
         info->x = 0;
         while (Iboard[Iy][Ix])
         {
             if (ft_check_piece_pos(info) == 1)
+            {
+                dprintf(fdr, "il est entré\n");
                 return (1);
+            }
             //ft_check_pos();
             Ix++;
         }
