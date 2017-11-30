@@ -1,1 +1,3 @@
-seed = 2484
+seed = 3536
+O: error on input
+./patate.filler: Segfault at 0

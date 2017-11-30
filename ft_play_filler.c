@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 16:31:06 by susivagn          #+#    #+#             */
-/*   Updated: 2017/11/29 20:14:15 by susivagn         ###   ########.fr       */
+/*   Updated: 2017/11/30 15:34:18 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,23 @@
 
 int     ft_if_valide(int y, int x, t_info *info)
 {
-    if (!Iboard[Iy + (y - My)][Ix + (x - Mx)] || 
+    dprintf(info->fds, "VALID\n");
+    if (!(Iboard[Iy + (y - My)][Ix + (x - Mx)]) || 
         Iboard[Iy + (y - My)][Ix + (x - Mx)] == 'X')
-        return (0);
+        {
+            dprintf(info->fds, "    ITS *X* OR NULL\n");
+            return (0);
+        }
     if (Iboard[Iy + (y - My)][Ix + (x - Mx)] == 'O')
-        info->okcount++;
-    if (info->okcount > 1 || info->okcount < 1)
-        return (0);
+        {
+            dprintf(info->fds, "        ITS *O*\n");
+            info->okcount++;
+        }
     if (Iboard[Iy + (y - My)][Ix + (x - Mx)] == '.')
-        return (1);
+        {
+            dprintf(info->fds, "                VALID ZONE\n");
+            return (1);
+        }
     return (0);
 }
 
@@ -34,24 +42,34 @@ int     ft_check_piece_pos(t_info *info)
     y = 0;
     info->ok = 1;
     info->okcount = 0;
-    dprintf(info->fds, "strat NTM\n");
+    dprintf(info->fds, "start NTM %d - %d\n", Iy, Ix);
     while (Ipiece[y])
     {
         x = 0;
-        while (Ipiece[x])
+        while (Ipiece[y][x])
         {
             if (Mar == 0 && (Ipiece[y][x] == '*'))
             {
                 Mar = 1;
                 Mx = x;
                 My = y;
+                dprintf(info->fds, "MX = %d, MY = %d\n", Mx, My);
             }
             if ((Ipiece[y][x] == '*') && (ft_if_valide(y, x, info) != 1))
+            {
+                dprintf(info->fds, "EXIT NTM\n");
                 return (0);
+            }
             x++;
         }
         y++;
     }
+    if (info->okcount > 1 || info->okcount < 1) 
+        {
+            dprintf(info->fds, "    BAD COUNT\n");
+            return (0);
+        }
+    dprintf(info->fds, "    GOOD COUNT\n"); 
     return(1);
 }
 
@@ -67,7 +85,7 @@ int    ft_play_filler(int fdr, t_info *info)
     info->y = 0;
     info->margin = 0;
     info->fds = fdr;
-    dprintf(fdr, "strat while\n");
+    dprintf(fdr, "start while\n");
     while (Iboard[Iy])
     {
         info->x = 0;
