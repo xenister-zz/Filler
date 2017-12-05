@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 16:31:06 by susivagn          #+#    #+#             */
-/*   Updated: 2017/11/30 15:34:18 by susivagn         ###   ########.fr       */
+/*   Updated: 2017/12/05 16:48:01 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int     ft_if_valide(int y, int x, t_info *info)
 {
-    dprintf(info->fds, "VALID\n");
+    dprintf(info->fds, "CHECK VALID\n");
     if (!(Iboard[Iy + (y - My)][Ix + (x - Mx)]) || 
         Iboard[Iy + (y - My)][Ix + (x - Mx)] == 'X')
         {
@@ -25,6 +25,7 @@ int     ft_if_valide(int y, int x, t_info *info)
         {
             dprintf(info->fds, "        ITS *O*\n");
             info->okcount++;
+            return(1);
         }
     if (Iboard[Iy + (y - My)][Ix + (x - Mx)] == '.')
         {
