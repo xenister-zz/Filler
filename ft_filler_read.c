@@ -6,13 +6,13 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 14:59:25 by susivagn          #+#    #+#             */
-/*   Updated: 2017/11/28 18:28:05 by susivagn         ###   ########.fr       */
+/*   Updated: 2017/12/06 16:02:05 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./filler.h"
 
-void    ft_get_player(char *line, t_info *info)
+void    get_player(char *line, t_info *info)
 {
     if (ft_strstr(line, "p1"))
         info->player = 1;
@@ -20,7 +20,7 @@ void    ft_get_player(char *line, t_info *info)
         info->player = 2;
 }
 
-void    ft_get_board(int fd, char *line, t_info *info)
+void    get_board(int fd, char *line, t_info *info)
 {
     int size;
     int ret;
@@ -41,7 +41,7 @@ void    ft_get_board(int fd, char *line, t_info *info)
     }
 }
 
-void ft_get_piece(int fd, char *line, t_info *info)
+void get_piece(int fd, char *line, t_info *info)
 {
     int size;
     int ret;
@@ -63,7 +63,7 @@ void ft_get_piece(int fd, char *line, t_info *info)
 
 }
 
-int     ft_filler_read(int fdr, t_info *info)
+int     filler_read(int fdr, t_info *info)
 {
     int     ret;
     char    *line;
@@ -76,12 +76,12 @@ int     ft_filler_read(int fdr, t_info *info)
     {
         //dprintf(fdr, "%i\n", ret);
         if(info->player == 0)
-            ft_get_player(line, info);
+            get_player(line, info);
         if (ft_strstr(line, "Plateau"))
-            ft_get_board(0, line, info);
+            get_board(0, line, info);
         if (ft_strstr(line, "Piece"))
         {
-            ft_get_piece(0, line, info);
+            get_piece(0, line, info);
             break;
         }
     }

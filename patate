@@ -22,15 +22,12 @@
 ........................................
 ........................................
 ........................................
-***.
-..*.
+.
+*
+*
 start while
 start NTM 0 - 0
-MX = 0, MY = 0
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
+MX = 0, MY = 1
 CHECK VALID
                 VALID ZONE
 CHECK VALID
@@ -41,16 +38,8 @@ CHECK VALID
                 VALID ZONE
 CHECK VALID
                 VALID ZONE
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
     BAD COUNT
 start NTM 0 - 2
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
 CHECK VALID
                 VALID ZONE
 CHECK VALID
@@ -61,16 +50,8 @@ CHECK VALID
                 VALID ZONE
 CHECK VALID
                 VALID ZONE
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
     BAD COUNT
 start NTM 0 - 4
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
 CHECK VALID
                 VALID ZONE
 CHECK VALID
@@ -81,16 +62,8 @@ CHECK VALID
                 VALID ZONE
 CHECK VALID
                 VALID ZONE
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
     BAD COUNT
 start NTM 0 - 6
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
 CHECK VALID
                 VALID ZONE
 CHECK VALID
@@ -101,16 +74,8 @@ CHECK VALID
                 VALID ZONE
 CHECK VALID
                 VALID ZONE
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
     BAD COUNT
 start NTM 0 - 8
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
 CHECK VALID
                 VALID ZONE
 CHECK VALID
@@ -121,16 +86,8 @@ CHECK VALID
                 VALID ZONE
 CHECK VALID
                 VALID ZONE
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
     BAD COUNT
 start NTM 0 - 10
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
 CHECK VALID
                 VALID ZONE
 CHECK VALID
@@ -141,16 +98,8 @@ CHECK VALID
                 VALID ZONE
 CHECK VALID
                 VALID ZONE
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
     BAD COUNT
 start NTM 0 - 12
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
 CHECK VALID
                 VALID ZONE
 CHECK VALID
@@ -161,16 +110,8 @@ CHECK VALID
                 VALID ZONE
 CHECK VALID
                 VALID ZONE
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
     BAD COUNT
 start NTM 0 - 14
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
 CHECK VALID
                 VALID ZONE
 CHECK VALID
@@ -181,16 +122,8 @@ CHECK VALID
                 VALID ZONE
 CHECK VALID
                 VALID ZONE
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
     BAD COUNT
 start NTM 0 - 16
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
 CHECK VALID
                 VALID ZONE
 CHECK VALID
@@ -201,16 +134,8 @@ CHECK VALID
                 VALID ZONE
 CHECK VALID
                 VALID ZONE
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
     BAD COUNT
 start NTM 0 - 18
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
 CHECK VALID
                 VALID ZONE
 CHECK VALID
@@ -221,16 +146,8 @@ CHECK VALID
                 VALID ZONE
 CHECK VALID
                 VALID ZONE
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
     BAD COUNT
 start NTM 0 - 20
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
 CHECK VALID
                 VALID ZONE
 CHECK VALID
@@ -241,16 +158,8 @@ CHECK VALID
                 VALID ZONE
 CHECK VALID
                 VALID ZONE
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
     BAD COUNT
 start NTM 0 - 22
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
 CHECK VALID
                 VALID ZONE
 CHECK VALID
@@ -261,16 +170,8 @@ CHECK VALID
                 VALID ZONE
 CHECK VALID
                 VALID ZONE
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
     BAD COUNT
 start NTM 0 - 24
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
 CHECK VALID
                 VALID ZONE
 CHECK VALID
@@ -281,16 +182,8 @@ CHECK VALID
                 VALID ZONE
 CHECK VALID
                 VALID ZONE
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
     BAD COUNT
 start NTM 0 - 26
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
 CHECK VALID
                 VALID ZONE
 CHECK VALID
@@ -301,16 +194,8 @@ CHECK VALID
                 VALID ZONE
 CHECK VALID
                 VALID ZONE
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
     BAD COUNT
 start NTM 0 - 28
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
 CHECK VALID
                 VALID ZONE
 CHECK VALID
@@ -321,16 +206,8 @@ CHECK VALID
                 VALID ZONE
 CHECK VALID
                 VALID ZONE
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
     BAD COUNT
 start NTM 0 - 30
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
 CHECK VALID
                 VALID ZONE
 CHECK VALID
@@ -341,16 +218,8 @@ CHECK VALID
                 VALID ZONE
 CHECK VALID
                 VALID ZONE
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
     BAD COUNT
 start NTM 0 - 32
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
 CHECK VALID
                 VALID ZONE
 CHECK VALID
@@ -361,16 +230,8 @@ CHECK VALID
                 VALID ZONE
 CHECK VALID
                 VALID ZONE
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
     BAD COUNT
 start NTM 0 - 34
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
 CHECK VALID
                 VALID ZONE
 CHECK VALID
@@ -381,16 +242,8 @@ CHECK VALID
                 VALID ZONE
 CHECK VALID
                 VALID ZONE
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
     BAD COUNT
 start NTM 0 - 36
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
 CHECK VALID
                 VALID ZONE
 CHECK VALID
@@ -401,30 +254,20 @@ CHECK VALID
                 VALID ZONE
 CHECK VALID
                 VALID ZONE
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
     BAD COUNT
 start NTM 0 - 38
 CHECK VALID
                 VALID ZONE
 CHECK VALID
                 VALID ZONE
-CHECK VALID
-    ITS *X* OR NULL
-EXIT NTM
+    BAD COUNT
 start NTM 0 - 39
 CHECK VALID
                 VALID ZONE
 CHECK VALID
-    ITS *X* OR NULL
-EXIT NTM
+                VALID ZONE
+    BAD COUNT
 start NTM 1 - 0
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
 CHECK VALID
                 VALID ZONE
 CHECK VALID
@@ -435,16 +278,8 @@ CHECK VALID
                 VALID ZONE
 CHECK VALID
                 VALID ZONE
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
     BAD COUNT
 start NTM 1 - 2
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
 CHECK VALID
                 VALID ZONE
 CHECK VALID
@@ -455,16 +290,8 @@ CHECK VALID
                 VALID ZONE
 CHECK VALID
                 VALID ZONE
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
     BAD COUNT
 start NTM 1 - 4
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
 CHECK VALID
                 VALID ZONE
 CHECK VALID
@@ -475,16 +302,8 @@ CHECK VALID
                 VALID ZONE
 CHECK VALID
                 VALID ZONE
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
     BAD COUNT
 start NTM 1 - 6
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
 CHECK VALID
                 VALID ZONE
 CHECK VALID
@@ -495,16 +314,8 @@ CHECK VALID
                 VALID ZONE
 CHECK VALID
                 VALID ZONE
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
     BAD COUNT
 start NTM 1 - 8
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
 CHECK VALID
                 VALID ZONE
 CHECK VALID
@@ -515,16 +326,8 @@ CHECK VALID
                 VALID ZONE
 CHECK VALID
                 VALID ZONE
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
     BAD COUNT
 start NTM 1 - 10
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
 CHECK VALID
                 VALID ZONE
 CHECK VALID
@@ -535,16 +338,8 @@ CHECK VALID
                 VALID ZONE
 CHECK VALID
                 VALID ZONE
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
     BAD COUNT
 start NTM 1 - 12
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
 CHECK VALID
                 VALID ZONE
 CHECK VALID
@@ -555,16 +350,8 @@ CHECK VALID
                 VALID ZONE
 CHECK VALID
                 VALID ZONE
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
     BAD COUNT
 start NTM 1 - 14
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
 CHECK VALID
                 VALID ZONE
 CHECK VALID
@@ -575,16 +362,8 @@ CHECK VALID
                 VALID ZONE
 CHECK VALID
                 VALID ZONE
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
     BAD COUNT
 start NTM 1 - 16
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
 CHECK VALID
                 VALID ZONE
 CHECK VALID
@@ -595,16 +374,8 @@ CHECK VALID
                 VALID ZONE
 CHECK VALID
                 VALID ZONE
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
     BAD COUNT
 start NTM 1 - 18
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
 CHECK VALID
                 VALID ZONE
 CHECK VALID
@@ -615,16 +386,8 @@ CHECK VALID
                 VALID ZONE
 CHECK VALID
                 VALID ZONE
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
     BAD COUNT
 start NTM 1 - 20
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
 CHECK VALID
                 VALID ZONE
 CHECK VALID
@@ -635,16 +398,8 @@ CHECK VALID
                 VALID ZONE
 CHECK VALID
                 VALID ZONE
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
     BAD COUNT
 start NTM 1 - 22
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
 CHECK VALID
                 VALID ZONE
 CHECK VALID
@@ -655,16 +410,8 @@ CHECK VALID
                 VALID ZONE
 CHECK VALID
                 VALID ZONE
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
     BAD COUNT
 start NTM 1 - 24
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
 CHECK VALID
                 VALID ZONE
 CHECK VALID
@@ -675,16 +422,8 @@ CHECK VALID
                 VALID ZONE
 CHECK VALID
                 VALID ZONE
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
     BAD COUNT
 start NTM 1 - 26
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
 CHECK VALID
                 VALID ZONE
 CHECK VALID
@@ -695,16 +434,8 @@ CHECK VALID
                 VALID ZONE
 CHECK VALID
                 VALID ZONE
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
     BAD COUNT
 start NTM 1 - 28
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
 CHECK VALID
                 VALID ZONE
 CHECK VALID
@@ -715,16 +446,8 @@ CHECK VALID
                 VALID ZONE
 CHECK VALID
                 VALID ZONE
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
     BAD COUNT
 start NTM 1 - 30
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
 CHECK VALID
                 VALID ZONE
 CHECK VALID
@@ -735,16 +458,8 @@ CHECK VALID
                 VALID ZONE
 CHECK VALID
                 VALID ZONE
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
     BAD COUNT
 start NTM 1 - 32
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
 CHECK VALID
                 VALID ZONE
 CHECK VALID
@@ -755,16 +470,8 @@ CHECK VALID
                 VALID ZONE
 CHECK VALID
                 VALID ZONE
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
     BAD COUNT
 start NTM 1 - 34
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
 CHECK VALID
                 VALID ZONE
 CHECK VALID
@@ -775,16 +482,8 @@ CHECK VALID
                 VALID ZONE
 CHECK VALID
                 VALID ZONE
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
     BAD COUNT
 start NTM 1 - 36
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
 CHECK VALID
                 VALID ZONE
 CHECK VALID
@@ -795,30 +494,20 @@ CHECK VALID
                 VALID ZONE
 CHECK VALID
                 VALID ZONE
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
     BAD COUNT
 start NTM 1 - 38
 CHECK VALID
                 VALID ZONE
 CHECK VALID
                 VALID ZONE
-CHECK VALID
-    ITS *X* OR NULL
-EXIT NTM
+    BAD COUNT
 start NTM 1 - 39
 CHECK VALID
                 VALID ZONE
 CHECK VALID
-    ITS *X* OR NULL
-EXIT NTM
+                VALID ZONE
+    BAD COUNT
 start NTM 2 - 0
-CHECK VALID
-                VALID ZONE
-CHECK VALID
-                VALID ZONE
 CHECK VALID
                 VALID ZONE
 CHECK VALID
@@ -829,6 +518,14 @@ CHECK VALID
                 VALID ZONE
 CHECK VALID
                 VALID ZONE
+    BAD COUNT
+start NTM 2 - 2
+CHECK VALID
+                VALID ZONE
+CHECK VALID
+                VALID ZONE
+    BAD COUNT
+start NTM 2 - 3
 CHECK VALID
                 VALID ZONE
 CHECK VALID
