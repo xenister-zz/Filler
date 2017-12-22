@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 15:04:04 by susivagn          #+#    #+#             */
-/*   Updated: 2017/12/06 17:30:17 by susivagn         ###   ########.fr       */
+/*   Updated: 2017/12/17 14:40:37 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void            get_player(char *line, t_info *info);
 int             filler_read(int fdr, t_info *info);
 void            get_board(int fd, char *line, t_info *info);
 void            get_piece(int fd, char *line, t_info *info);
-int             play_filler(int fdr,t_info *info);
+int             play_filler(int fdr, t_info *info);
 int             if_valide(int y, int x, t_info *info);
 int             check_piece_pos(t_info *info);
 

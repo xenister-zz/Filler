@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 14:59:25 by susivagn          #+#    #+#             */
-/*   Updated: 2017/12/06 16:02:05 by susivagn         ###   ########.fr       */
+/*   Updated: 2017/12/22 17:40:46 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,15 @@ void    get_player(char *line, t_info *info)
 void    get_board(int fd, char *line, t_info *info)
 {
     int size;
+    int size2;
     int ret;
     int i;
+    
 
     ret = 0;
     i = 0;
     size = ft_atoi(&line[8]);
+    size2 = ft_atoi(&line[11]);
     while ((ret = get_next_line(fd, &line)) > 0)
     {
         if (line[0] == '0')
@@ -37,7 +40,10 @@ void    get_board(int fd, char *line, t_info *info)
             i++;
         }
         if (i == size)
+        {
+            info->board = ft_addtable(info->board, ft_memalloc(size2, '\0'), (size + 1));
             break;
+        }
     }
 }
 

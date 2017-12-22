@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 16:31:06 by susivagn          #+#    #+#             */
-/*   Updated: 2017/12/06 18:53:04 by susivagn         ###   ########.fr       */
+/*   Updated: 2017/12/22 18:06:05 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,21 @@
 int     if_valide(int y, int x, t_info *info)
 {
     dprintf(info->fds, "CHECK VALID\n");
-    if (!(Iboard[Iy + (y - My)][Ix + (x - Mx)]) || 
-        Iboard[Iy + (y - My)][Ix + (x - Mx)] == 'X')
+    if (!(Iboard[Iy + (y - My)][Ix + (x - Mx)]))
         {
-            dprintf(info->fds, "    ITS *X* OR NULL\n");
+            dprintf(info->fds, "            ITS NULL\n");
+            return (0);
+        }
+    if (Iboard[Iy + (y - My)][Ix + (x - Mx)] == 'X')
+        {
+            dprintf(info->fds, "            ITS *X*\n");
             return (0);
         }
     if (Iboard[Iy + (y - My)][Ix + (x - Mx)] == 'O')
         {
-            dprintf(info->fds, "        ITS *O*\n");
+            dprintf(info->fds, "            ITS *O*\n");
             info->okcount++;
-            return(1); 
+            return(0); 
         }
     if (Iboard[Iy + (y - My)][Ix + (x - Mx)] == '.')
         {
@@ -75,7 +79,7 @@ int     check_piece_pos(t_info *info)
 }
 
 int     check_pos();
-
+/*
 int     chauffage(t_info *info);
 {
     int     i;
@@ -84,7 +88,7 @@ int     chauffage(t_info *info);
     
     
 }
-
+*/
 
 int    play_filler(int fdr, t_info *info)
 {
