@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 16:31:06 by susivagn          #+#    #+#             */
-/*   Updated: 2017/12/22 18:06:05 by susivagn         ###   ########.fr       */
+/*   Updated: 2017/12/22 19:52:33 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int     if_valide(int y, int x, t_info *info)
         }
     if (Iboard[Iy + (y - My)][Ix + (x - Mx)] == '.')
         {
-            dprintf(info->fds, "                VALID ZONE\n");
+            dprintf(info->fds, "            VALID ZONE\n");
             return (1);
         }
     return (0);
