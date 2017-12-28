@@ -6,13 +6,13 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 16:03:48 by susivagn          #+#    #+#             */
-/*   Updated: 2017/11/13 14:37:44 by susivagn         ###   ########.fr       */
+/*   Updated: 2017/12/28 17:00:39 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libft.h"
 
-char        **ft_addtable(char **table, char *toadd, int size)
+char        **ft_addchartable(char **table, char *toadd, int size)
 {
     int     i;
 
