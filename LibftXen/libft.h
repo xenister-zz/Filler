@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 14:16:30 by susivagn          #+#    #+#             */
-/*   Updated: 2017/12/28 17:01:05 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/01/04 15:54:46 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -142,6 +142,7 @@ int				ft_count_char(char *src, char c);
 int				ft_no_encounter_index(char *str, char *caras);
 int 			get_next_line(const int fd, char **line);
 char 			**ft_addchartable(char **table, char *toadd, int size);
+int        		**ft_addinttable(int **table, int *toadd, int size, int size2);
 int 			ft_print_table(char **table, int newline);
 
 #endif

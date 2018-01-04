@@ -6,30 +6,33 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 18:21:39 by susivagn          #+#    #+#             */
-/*   Updated: 2017/12/28 17:21:41 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/01/04 19:41:06 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include "./LibftXen/ft_printf.h"
+
 #include "./filler.h"
 
 int     main ()
 {
-    int     fdr = open("./patate", O_CREAT | O_RDWR | O_APPEND, 0666);
+    int     fdr = open("./patate", O_CREAT | O_RDWR | O_TRUNC, 0666);
     char    *line;
     int     i;
     t_info  *info;
 
-    info = ft_memalloc(sizeof(t_info), '\0');
-    info->player = 0;
-    info->piece = NULL;
-    info->board = NULL;
+    info = ft_memalloc(sizeof(t_info), 0);
     line = NULL;
-    filler_read(fdr, info);
-    play_filler(fdr, info);
-    printf("3 3\n");
-
-    printf("19 33\n");
+    while (1)
+    {
+        filler_read(fdr, info);
+        play_filler(fdr, info);
+        dprintf(info->fds, "SORTIE =============== %d %d\n", (Iy - My), (Ix - Mx));
+        ft_printf("%d %d\n", (Iy - My), (Ix - Mx));
+        Iboard = NULL;
+        Ipiece = NULL;
+    }
     
     return (0);
 }

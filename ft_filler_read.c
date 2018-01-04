@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 14:59:25 by susivagn          #+#    #+#             */
-/*   Updated: 2017/12/28 17:02:11 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/01/04 19:33:58 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,26 +22,25 @@ void    get_player(char *line, t_info *info)
 
 void    get_board(int fd, char *line, t_info *info)
 {
-    int size;
-    int size2;
     int ret;
     int i;
     
 
     ret = 0;
     i = 0;
-    size = ft_atoi(&line[8]);
-    size2 = ft_atoi(&line[11]);
+    info->size = ft_atoi(&line[8]);
+    info->size2 = ft_atoi(&line[11]);
+    dprintf(info->fds, "board size1 = %d - board size2 = %d\n", info->size , info->size2);
     while ((ret = get_next_line(fd, &line)) > 0)
     {
         if (line[0] == '0')
         {
-            info->board = ft_addchartable(info->board, &line[4], size);
+            info->board = ft_addchartable(info->board, &line[4], info->size);
             i++;
         }
-        if (i == size)
+        if (i == info->size)
         {
-            info->board = ft_addchartable(info->board, ft_memalloc(size2, '\0'), (size + 1));
+            info->board = ft_addchartable(info->board, ft_memalloc(info->size2, '\0'), (info->size + 1));
             break;
         }
     }
@@ -49,21 +48,20 @@ void    get_board(int fd, char *line, t_info *info)
 
 void get_piece(int fd, char *line, t_info *info)
 {
-    int size;
     int ret;
     int i;
 
     ret = 0;
     i = 0;
-    size = ft_atoi(&line[6]);
+    info->size = ft_atoi(&line[6]);
     while ((ret = get_next_line(fd, &line)) > 0)
     {
         if ((line[0] == '.') || (line[0] == '*'))
         {
-            info->piece = ft_addchartable(info->piece, line, size);
+            info->piece = ft_addchartable(info->piece, line, info->size);
             i++;
         }
-        if (i == size)
+        if (i == info->size)
             break;
     }
 
@@ -76,7 +74,7 @@ int     filler_read(int fdr, t_info *info)
     int     boo;
 
     boo = 0;
-    //int fd = open("./pate", O_CREAT | O_RDWR, 0666);
+    info->fds = fdr;
     ret = 0;
     while ((ret = get_next_line(0, &line)) > 0)
     {

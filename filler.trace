@@ -1,1 +1,5 @@
-seed = 4365
+seed = 5234
+./patate.filler: Segfault at 183
+./patate.filler won
+Score:
+183AGAINST179
