@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 15:04:04 by susivagn          #+#    #+#             */
-/*   Updated: 2018/01/04 20:05:38 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/01/05 19:59:31 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,9 @@
 #include <fcntl.h>
 
 #define Iboard info->board
-#define Is_board info->score_board
+#define IS1 info->size
+#define IS2 info->size2
+#define SCORE info->score
 #define Ipiece info->piece
 #define Ix info->x
 #define Iy info->y
@@ -40,7 +42,6 @@ typedef struct  s_info
     int     x;
     int     y;
     int     score;
-    int     **score_board;
     int     Sx;
     int     Sy;
     int     margin;

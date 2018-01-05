@@ -1,4 +1,3 @@
-seed = 6616
-./patate.filler won
-Score:
-1017AGAINST1020
+seed = 2143
+X: error on input
+./patate.filler: Segfault at 0
