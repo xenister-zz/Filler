@@ -6,13 +6,40 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 16:31:06 by susivagn          #+#    #+#             */
-/*   Updated: 2018/01/04 19:05:16 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/01/05 16:03:58 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./filler.h"
 
-int     if_valide(int y, int x, t_info *info)
+int     if_validep1(int y, int x, t_info *info)
+{
+    //dprintf(info->fds, "CHECK VALID\n");
+    if (!(Iboard[Iy + (y - My)][Ix + (x - Mx)]))
+        {
+            //dprintf(info->fds, "            ITS NULL\n");
+            return (0);
+        }
+    if (Iboard[Iy + (y - My)][Ix + (x - Mx)] == 'X')
+        {
+            //dprintf(info->fds, "            ITS *X*\n");
+            return (0);
+        }
+    if (Iboard[Iy + (y - My)][Ix + (x - Mx)] == 'O')
+        {
+            //dprintf(info->fds, "            ITS *O*\n");
+            info->okcount++;
+            return(1);
+        }
+    if (Iboard[Iy + (y - My)][Ix + (x - Mx)] == '.')
+        {
+            //dprintf(info->fds, "            VALID ZONE\n");
+            return (1);
+        }
+    return (0);
+}
+
+int     if_validep2(int y, int x, t_info *info)
 {
     dprintf(info->fds, "CHECK VALID\n");
     if (!(Iboard[Iy + (y - My)][Ix + (x - Mx)]))
@@ -20,12 +47,12 @@ int     if_valide(int y, int x, t_info *info)
             dprintf(info->fds, "            ITS NULL\n");
             return (0);
         }
-    if (Iboard[Iy + (y - My)][Ix + (x - Mx)] == 'X')
+    if (Iboard[Iy + (y - My)][Ix + (x - Mx)] == 'O')
         {
             dprintf(info->fds, "            ITS *X*\n");
             return (0);
         }
-    if (Iboard[Iy + (y - My)][Ix + (x - Mx)] == 'O')
+    if (Iboard[Iy + (y - My)][Ix + (x - Mx)] == 'X')
         {
             dprintf(info->fds, "            ITS *O*\n");
             info->okcount++;
@@ -49,7 +76,7 @@ int     check_piece_pos(t_info *info)
     nbpiece = 0;
     info->ok = 1;
     info->okcount = 0;
-    dprintf(info->fds, "start NTM %d - %d\n", Iy, Ix);
+    //dprintf(info->fds, "start NTM %d - %d\n", Iy, Ix);
 
     while (Ipiece[y])
     {
@@ -68,25 +95,35 @@ int     check_piece_pos(t_info *info)
                 Mar = 1;
                 Mx = x;
                 My = y;
-                dprintf(info->fds, "MX = %d, MY = %d\n", Mx, My);
+                //dprintf(info->fds, "MX = %d, MY = %d\n", Mx, My);
             }
-            if ((Ipiece[y][x] == '*') && (nbpiece--) && ((if_valide(y, x, info) != 1)))
+            if (info->player == 1)
             {
-                dprintf(info->fds, "EXIT NTM\n");
-                return (0);
+                if ((Ipiece[y][x] == '*') && (nbpiece--) && ((if_validep1(y, x, info) != 1)))
+                {
+                    //dprintf(info->fds, "EXIT NTM\n");
+                    return (0);
+                }
             }
-            dprintf(info->fds, "PIECE ====%d\n", nbpiece);
+            else
+            {
+                if ((Ipiece[y][x] == '*') && (nbpiece--) && ((if_validep2(y, x, info) != 1)))
+                {
+                    //dprintf(info->fds, "EXIT NTM\n");
+                    return (0);
+                }
+            }
             x++;
         }
         y++;
     }
-    if (info->okcount != 1) 
+    if (info->okcount != 1)
     {
-        dprintf(info->fds, "    BAD COUNT\n");
+        //dprintf(info->fds, "    BAD COUNT\n");
         return (0);
     }
-    dprintf(info->fds, "    GOOD COUNT\n");
-    dprintf(info->fds, "y == %d x == %d\n", Iy, Ix);
+    //dprintf(info->fds, "    GOOD COUNT\n");
+    //dprintf(info->fds, "y == %d x == %d\n", Iy, Ix);
     return(1);
 }
 
@@ -109,7 +146,7 @@ int    play_filler(int fdr, t_info *info)
     i = 0;
     info->y = 0;
     info->margin = 0;
-    dprintf(fdr, "start while\n");
+    //dprintf(fdr, "start while\n");
     while (Iboard[Iy])
     {
         info->x = 0;
@@ -117,7 +154,7 @@ int    play_filler(int fdr, t_info *info)
         {
             if (check_piece_pos(info) == 1)
             {
-                dprintf(fdr, "il est entré\n");
+                //dprintf(fdr, "il est entré\n");
                 return (1);
             }
             //ft_check_pos();
@@ -125,5 +162,7 @@ int    play_filler(int fdr, t_info *info)
         }
         Iy++;
     }
+    if (!(Iboard[Iy]) || !(Iboard[Iy][Ix]))
+        info->frein = 1;
     return(1);
 }

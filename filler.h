@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 15:04:04 by susivagn          #+#    #+#             */
-/*   Updated: 2018/01/04 15:41:52 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/01/04 20:05:38 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@
 
 typedef struct  s_info
 {
+    int     frein;
     int     size;
     int     size2;
     int     ok;

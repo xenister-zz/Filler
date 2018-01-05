@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 14:59:25 by susivagn          #+#    #+#             */
-/*   Updated: 2018/01/04 19:33:58 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/01/05 16:29:59 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,9 @@ void    get_player(char *line, t_info *info)
 {
     if (ft_strstr(line, "p1"))
         info->player = 1;
-    if (ft_strstr(line, "p2"))
+    else
         info->player = 2;
+    dprintf(info->fds, "players ================== %d\n", info->player);
 }
 
 void    get_board(int fd, char *line, t_info *info)
@@ -35,11 +36,12 @@ void    get_board(int fd, char *line, t_info *info)
     {
         if (line[0] == '0')
         {
-            info->board = ft_addchartable(info->board, &line[4], info->size);
+            info->board = ft_addchartable(info->board, &line[4], info->size + 1);
             i++;
         }
         if (i == info->size)
         {
+            dprintf(info->fds, "THERE i = %d \n", i);
             info->board = ft_addchartable(info->board, ft_memalloc(info->size2, '\0'), (info->size + 1));
             break;
         }
@@ -90,14 +92,14 @@ int     filler_read(int fdr, t_info *info)
         }
     }
     boo = 0;
-    while (info->board[boo])
-    {
-        dprintf(fdr, "%s\n", info->board[boo++]);
-    }
-    boo = 0;
-    while (info->piece[boo])
-    {
-        dprintf(fdr, "%s\n", info->piece[boo++]);
-    }
+    // while (info->board[boo])
+    // {
+    //     dprintf(fdr, "%s\n", info->board[boo++]);
+    // }
+    // boo = 0;
+    // while (info->piece[boo])
+    // {
+    //     dprintf(fdr, "%s\n", info->piece[boo++]);
+    // }
     return (0);
 }
