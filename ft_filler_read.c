@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 14:59:25 by susivagn          #+#    #+#             */
-/*   Updated: 2018/01/05 16:29:59 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/01/08 17:59:53 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,20 +29,20 @@ void    get_board(int fd, char *line, t_info *info)
 
     ret = 0;
     i = 0;
-    info->size = ft_atoi(&line[8]);
-    info->size2 = ft_atoi(&line[11]);
-    dprintf(info->fds, "board size1 = %d - board size2 = %d\n", info->size , info->size2);
+    SZBOARDY = ft_atoi(&line[8]);
+    SZBOARDX = ft_atoi(&line[11]);
+    dprintf(info->fds, "board size1 = %d - board size2 = %d\n", SZBOARDY , SZBOARDX);
     while ((ret = get_next_line(fd, &line)) > 0)
     {
         if (line[0] == '0')
         {
-            info->board = ft_addchartable(info->board, &line[4], info->size + 1);
+            info->board = ft_addchartable(info->board, &line[4], SZBOARDY + 1);
             i++;
         }
-        if (i == info->size)
+        if (i == SZBOARDY)
         {
             dprintf(info->fds, "THERE i = %d \n", i);
-            info->board = ft_addchartable(info->board, ft_memalloc(info->size2, '\0'), (info->size + 1));
+            info->board = ft_addchartable(info->board, ft_memalloc(SZBOARDX, '\0'), (SZBOARDY + 1));
             break;
         }
     }
@@ -55,15 +55,16 @@ void get_piece(int fd, char *line, t_info *info)
 
     ret = 0;
     i = 0;
-    info->size = ft_atoi(&line[6]);
+    info->piece_sizey = ft_atoi(&line[6]);
+    info->piece_sizex = ft_atoi(&line[8]);
     while ((ret = get_next_line(fd, &line)) > 0)
     {
         if ((line[0] == '.') || (line[0] == '*'))
         {
-            info->piece = ft_addchartable(info->piece, line, info->size);
+            info->piece = ft_addchartable(info->piece, line, SZBOARDY);
             i++;
         }
-        if (i == info->size)
+        if (i == SZBOARDY)
             break;
     }
 

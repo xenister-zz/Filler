@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 18:21:39 by susivagn          #+#    #+#             */
-/*   Updated: 2018/01/04 20:31:06 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/01/08 19:10:44 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,13 @@ int     main ()
     {
         filler_read(fdr, info);
         dprintf(info->fds, "SORTIE ===============segfault haha\n");
-        play_filler(fdr, info);
-        dprintf(info->fds, "SORTIE =============== %d %d\n", (Iy - My), (Ix - Mx));
-        ft_printf("%d %d\n", (Iy - My), (Ix - Mx));
-        Iboard = NULL;
-        Ipiece = NULL;
-        if (info->frein == 1)
+        i = play_filler(fdr, info);
+        if ((i == 2) && (F_SCORE != 0))
             break;
+        dprintf(info->fds, "SORTIE =============== %d %d\n", (IY - MY), (IX - MX));
+        ft_printf("%d %d\n", (IY - MY), (IX - MX));
+        IBOARD = NULL;
+        IPIECE = NULL;
     }
     
     return (0);

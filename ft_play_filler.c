@@ -6,34 +6,89 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 16:31:06 by susivagn          #+#    #+#             */
-/*   Updated: 2018/01/05 20:06:00 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/01/08 18:54:24 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./filler.h"
 
+// int     if_validep1(int y, int x, t_info *info)
+// {
+//     dprintf(info->fds, "CHECK VALID\n");
+//     if (!(IBOARD[IY + (y - MY)][IX + (x - MX)]))
+//         {
+//             dprintf(info->fds, "            ITS NULL\n");
+//             return (0);
+//         }
+//     if (IBOARD[IY + (y - MY)][IX + (x - MX)] == 'X')
+//         {
+//             dprintf(info->fds, "            ITS *X*\n");
+//             return (0);
+//         }
+//     if (IBOARD[IY + (y - MY)][IX + (x - MX)] == 'O')
+//         {
+//             dprintf(info->fds, "            ITS *O*\n");
+//             info->okcount++;
+//             return(1);
+//         }
+//     if (IBOARD[IY + (y - MY)][IX + (x - MX)] == '.')
+//         {
+//             dprintf(info->fds, "            VALID ZONE\n");
+//             return (1);
+//         }
+//     return (0);
+// }
+
+// int     if_validep2(int y, int x, t_info *info)
+// {
+//     dprintf(info->fds, "CHECK VALID\n");
+//     if (!(IBOARD[IY + (y - MY)][IX + (x - MX)]))
+//         {
+//             dprintf(info->fds, "            ITS NULL\n");
+//             return (0);
+//         }
+//     if (IBOARD[IY + (y - MY)][IX + (x - MX)] == 'O')
+//         {
+//             dprintf(info->fds, "            ITS *X*\n");
+//             return (0);
+//         }
+//     if (IBOARD[IY + (y - MY)][IX + (x - MX)] == 'X')
+//         {
+//             dprintf(info->fds, "            ITS *O*\n");
+//             info->okcount++;
+//             return(1);
+//         }
+//     if (IBOARD[IY + (y - MY)][IX + (x - MX)] == '.')
+//         {
+//             dprintf(info->fds, "            VALID ZONE\n");
+//             return (1);
+//         }
+//     return (0);
+// }
+
 int     if_validep1(int y, int x, t_info *info)
 {
     dprintf(info->fds, "CHECK VALID\n");
-    if (!(Iboard[Iy + (y - My)][Ix + (x - Mx)]))
+    if (!(IBOARD[IY + (y - MY)][IX + (x - MX)]))
         {
             dprintf(info->fds, "            ITS NULL\n");
             return (0);
         }
-    if (Iboard[Iy + (y - My)][Ix + (x - Mx)] == 'X')
+    if (IBOARD[IY + (y - MY)][IX + (x - MX)] == 'X')
         {
             dprintf(info->fds, "            ITS *X*\n");
             return (0);
         }
-    if (Iboard[Iy + (y - My)][Ix + (x - Mx)] == 'O')
+    if (IBOARD[IY + (y - MY)][IX + (x - MX)] == 'O')
         {
             dprintf(info->fds, "            ITS *O*\n");
             info->okcount++;
             return(1);
         }
-    if (Iboard[Iy + (y - My)][Ix + (x - Mx)] == '.')
+    if (IBOARD[IY + (y - MY)][IX + (x - MX)] == '.')
         {
-            dprintf(info->fds, "            VALID ZONE\n");
+            SCORE += IBOARD[IY + (y - MY)][IX + (x - MX)];
+            dprintf(info->fds, "            VALID SCORE = %d\n", SCORE);
             return (1);
         }
     return (0);
@@ -42,29 +97,31 @@ int     if_validep1(int y, int x, t_info *info)
 int     if_validep2(int y, int x, t_info *info)
 {
     dprintf(info->fds, "CHECK VALID\n");
-    if (!(Iboard[Iy + (y - My)][Ix + (x - Mx)]))
+    if (!(IBOARD[IY + (y - MY)][IX + (x - MX)]))
         {
             dprintf(info->fds, "            ITS NULL\n");
             return (0);
         }
-    if (Iboard[Iy + (y - My)][Ix + (x - Mx)] == 'O')
+    if (IBOARD[IY + (y - MY)][IX + (x - MX)] == 'O')
         {
             dprintf(info->fds, "            ITS *X*\n");
             return (0);
         }
-    if (Iboard[Iy + (y - My)][Ix + (x - Mx)] == 'X')
+    if (IBOARD[IY + (y - MY)][IX + (x - MX)] == 'X')
         {
             dprintf(info->fds, "            ITS *O*\n");
             info->okcount++;
             return(1);
         }
-    if (Iboard[Iy + (y - My)][Ix + (x - Mx)] == '.')
+    if (IBOARD[IY + (y - MY)][IX + (x - MX)] == '.')
         {
-            dprintf(info->fds, "            VALID ZONE\n");
+            SCORE += IBOARD[IY + (y - MY)][IX + (x - MX)];
+            dprintf(info->fds, "            VALID SCORE = %d\n", SCORE);
             return (1);
         }
     return (0);
 }
+
 
 int     check_piece_pos(t_info *info)
 {
@@ -76,32 +133,32 @@ int     check_piece_pos(t_info *info)
     nbpiece = 0;
     info->ok = 1;
     info->okcount = 0;
-
-    while (Ipiece[y])
+    SCORE = 0;
+    while (IPIECE[y])
     {
-        nbpiece += ft_count_char(Ipiece[y], '*');
+        nbpiece += ft_count_char(IPIECE[y], '*');
         y++;
     }
     y = 0;
-    while (Ipiece[y] && (nbpiece > 0))
+    while (IPIECE[y] && (nbpiece > 0))
     {
         x = 0;
-        while (Ipiece[y][x] && (nbpiece > 0))
+        while (IPIECE[y][x] && (nbpiece > 0))
         {
-            if (Mar == 0 && (Ipiece[y][x] == '*'))
+            if (MAR == 0 && (IPIECE[y][x] == '*'))
             {
-                Mar = 1;
-                Mx = x;
-                My = y;
+                MAR = 1;
+                MX = x;
+                MY = y;
             }
             if (info->player == 1)
             {
-                if ((Ipiece[y][x] == '*') && (nbpiece--) && ((if_validep1(y, x, info) != 1)))
+                if ((IPIECE[y][x] == '*') && (nbpiece--) && ((if_validep1(y, x, info) != 1)))
                     return (0);
             }
             else
             {
-                if ((Ipiece[y][x] == '*') && (nbpiece--) && ((if_validep2(y, x, info) != 1)))
+                if ((IPIECE[y][x] == '*') && (nbpiece--) && ((if_validep2(y, x, info) != 1)))
                     return (0);
             }
             x++;
@@ -115,31 +172,39 @@ int     check_piece_pos(t_info *info)
 
 int     check_pos();
 
+int     last_in_tab(t_info *info)
+{
+    int     i;
+
+    i = 0;
+}
+
 int     chauffage(t_info *info);
 {
     int     i;
 
     i = -1;
-    while (Iboard[++i] && (Iboard[i][0] == '.') && (Iboard[i][0] != 'X') && (Iboard[i][0] != 'O'))
-        Iboard[i][0] = '<';
+    while (IBOARD[++i] && (IBOARD[i][0] == '.') && (IBOARD[i][0] != 'X') && (IBOARD[i][0] != 'O'))
+        IBOARD[i][0] = '<';
     i = -1;
-    while (Iboard[0][++i] && (Iboard[0][i] == '.') && (Iboard[0][i] != 'X') && (Iboard[0][i] != 'O'))
-        Iboard[0][i] = '<';
+    while (IBOARD[0][++i] && (IBOARD[0][i] == '.') && (IBOARD[0][i] != 'X') && (IBOARD[0][i] != 'O'))
+        IBOARD[0][i] = '<';
     i = -1;
-    while (Iboard[++i][IS2 - 1] && (Iboard[i][IS2 - 1] == '.') && (Iboard[i][IS2 - 1] != 'X') && (Iboard[i][IS2 - 1] != 'O'))
-        Iboard[i][IS2] = '<';
+    while (IBOARD[++i][IS2 - 1] && (IBOARD[i][IS2 - 1] == '.') && (IBOARD[i][IS2 - 1] != 'X') && (IBOARD[i][IS2 - 1] != 'O'))
+        IBOARD[i][IS2] = '<';
     i = -1;
-    while (Iboard[IS1 - 1][++i] && (Iboard[IS1 - 1][i] == '.') && (Iboard[IS1 - 1][i] != 'X') && (Iboard[IS1 - 1][i] != 'O'))
-        Iboard[IS1 - 1][i] = '<';
-    
-    
-
-
-
-    
-    
+    while (IBOARD[IS1 - 1][++i] && (IBOARD[IS1 - 1][i] == '.') && (IBOARD[IS1 - 1][i] != 'X') && (IBOARD[IS1 - 1][i] != 'O'))
+        IBOARD[IS1 - 1][i] = '<';
+    return (0);
 }
 
+void    ft_set_score(t_info *info)
+{
+    F_SCORE = SCORE;
+    SCORE = 0;
+    info->Sy = IY;
+    info->Sx = IX;
+}
 
 int    play_filler(int fdr, t_info *info)
 {
@@ -148,23 +213,25 @@ int    play_filler(int fdr, t_info *info)
     i = 0;
     info->y = 0;
     info->margin = 0;
-    dprintf(fdr, "*START PLAY FILLER*\n");
-    while (Iboard[Iy])
+    F_SCORE = 0;
+    dprintf(fdr, "*PLAY FILLER START*\n");
+    while (IBOARD[IY])
     {
         info->x = 0;
-        while (Iboard[Iy][Ix])
+        while (IBOARD[IY][IX])
         {
             if (check_piece_pos(info) == 1)
             {
-                //dprintf(fdr, "il est entré\n");
+                if (SCORE > F_SCORE)
+                    ft_set_score(info);
+                if ((IY == SZBOARDY - 1) && (IX == SZBOARDX - 1))
+                    return(2);
                 return (1);
             }
             //ft_check_pos();
-            Ix++;
+            IX++;
         }
-        Iy++;
+        IY++;
     }
-    if (!(Iboard[Iy]) || !(Iboard[Iy][Ix]))
-        info->frein = 1;
     return(1);
 }
