@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 16:31:06 by susivagn          #+#    #+#             */
-/*   Updated: 2018/01/16 16:01:46 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/01/16 19:31:52 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@
 
 int     if_validep1(int y, int x, t_info *info)
 {
-    dprintf(info->fds, "CHECK VALID\n");
+    dprintf(info->fds, "CHECK VALID ON %d - %d\n", IY, IX);
     if (!(IBOARD[IY + (y - MY)][IX + (x - MX)]))
         {
             dprintf(info->fds, "            ITS NULL\n");
@@ -83,6 +83,7 @@ int     if_validep1(int y, int x, t_info *info)
         {
             dprintf(info->fds, "            ITS *O*\n");
             info->okcount++;
+            SCORE += 46;
             return(1);
         }
     if (IBOARD[IY + (y - MY)][IX + (x - MX)] == '.')
@@ -96,7 +97,7 @@ int     if_validep1(int y, int x, t_info *info)
 
 int     if_validep2(int y, int x, t_info *info)
 {
-    dprintf(info->fds, "CHECK VALID\n");
+    dprintf(info->fds, "CHECK VALID ON %d - %d\n", IY, IX);
     if (!(IBOARD[IY + (y - MY)][IX + (x - MX)]))
         {
             dprintf(info->fds, "            ITS NULL\n");
@@ -109,7 +110,8 @@ int     if_validep2(int y, int x, t_info *info)
         }
     if (IBOARD[IY + (y - MY)][IX + (x - MX)] == 'X')
         {
-            dprintf(info->fds, "            ITS *O*\n");
+            dprintf(info->fds, "            ITS *X*\n");
+            SCORE += 46;
             info->okcount++;
             return(1);
         }
@@ -224,11 +226,10 @@ int    play_filler(int fdr, t_info *info)
         {
             if (check_piece_pos(info) == 1)
             {
-                //if (SCORE > F_SCORE)
-                //    ft_set_score(info);
-                //if ((IY == SZBOARDY - 1) && (IX == SZBOARDX - 1) && SCORE == 0)
-                //    return(2);
-                return (1);
+                if (SCORE > F_SCORE)
+                    ft_set_score(info);
+                if ((IY == SZBOARDY - 1) && (IX == SZBOARDX - 1) && SCORE == 0)
+                    return(2);
             }
             //ft_check_pos();
             IX++;
