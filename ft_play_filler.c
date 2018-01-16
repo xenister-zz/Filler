@@ -87,7 +87,7 @@ int     if_validep1(int y, int x, t_info *info)
             return(1);
         }
     if (IBOARD[IY + (y - MY)][IX + (x - MX)] == '.')
-        {
+        {  
             SCORE += IBOARD[IY + (y - MY)][IX + (x - MX)];
             dprintf(info->fds, "            VALID SCORE = %d\n", SCORE);
             return (1);
