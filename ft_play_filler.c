@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 16:31:06 by susivagn          #+#    #+#             */
-/*   Updated: 2018/01/08 18:54:24 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/01/16 16:01:46 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -177,9 +177,10 @@ int     last_in_tab(t_info *info)
     int     i;
 
     i = 0;
+    return (0);
 }
 
-int     chauffage(t_info *info);
+int     chauffage(t_info *info)
 {
     int     i;
 
@@ -190,11 +191,11 @@ int     chauffage(t_info *info);
     while (IBOARD[0][++i] && (IBOARD[0][i] == '.') && (IBOARD[0][i] != 'X') && (IBOARD[0][i] != 'O'))
         IBOARD[0][i] = '<';
     i = -1;
-    while (IBOARD[++i][IS2 - 1] && (IBOARD[i][IS2 - 1] == '.') && (IBOARD[i][IS2 - 1] != 'X') && (IBOARD[i][IS2 - 1] != 'O'))
-        IBOARD[i][IS2] = '<';
+    while (IBOARD[++i][SZBOARDX - 1] && (IBOARD[i][SZBOARDX - 1] == '.') && (IBOARD[i][SZBOARDX - 1] != 'X') && (IBOARD[i][SZBOARDX - 1] != 'O'))
+        IBOARD[i][SZBOARDX] = '<';
     i = -1;
-    while (IBOARD[IS1 - 1][++i] && (IBOARD[IS1 - 1][i] == '.') && (IBOARD[IS1 - 1][i] != 'X') && (IBOARD[IS1 - 1][i] != 'O'))
-        IBOARD[IS1 - 1][i] = '<';
+    while (IBOARD[SZBOARDY - 1][++i] && (IBOARD[SZBOARDY - 1][i] == '.') && (IBOARD[SZBOARDY - 1][i] != 'X') && (IBOARD[SZBOARDY - 1][i] != 'O'))
+        IBOARD[SZBOARDY - 1][i] = '<';
     return (0);
 }
 
@@ -213,6 +214,7 @@ int    play_filler(int fdr, t_info *info)
     i = 0;
     info->y = 0;
     info->margin = 0;
+    SCORE = 0;
     F_SCORE = 0;
     dprintf(fdr, "*PLAY FILLER START*\n");
     while (IBOARD[IY])
@@ -222,10 +224,10 @@ int    play_filler(int fdr, t_info *info)
         {
             if (check_piece_pos(info) == 1)
             {
-                if (SCORE > F_SCORE)
-                    ft_set_score(info);
-                if ((IY == SZBOARDY - 1) && (IX == SZBOARDX - 1))
-                    return(2);
+                //if (SCORE > F_SCORE)
+                //    ft_set_score(info);
+                //if ((IY == SZBOARDY - 1) && (IX == SZBOARDX - 1) && SCORE == 0)
+                //    return(2);
                 return (1);
             }
             //ft_check_pos();

@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 15:04:04 by susivagn          #+#    #+#             */
-/*   Updated: 2018/01/08 18:05:06 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/01/16 15:43:01 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@
 
 typedef struct  s_info
 {
-    int     frein;
     char    **board;
     int     board_sizey;
     int     board_sizex;
