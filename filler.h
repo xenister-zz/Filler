@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 15:04:04 by susivagn          #+#    #+#             */
-/*   Updated: 2018/01/16 15:43:01 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/01/17 11:59:59 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@
 #define SZPIECEX info->piece_sizex
 #define SCORE info->score
 #define F_SCORE info->finalscore
+#define SY info->Sy
+#define SX info->Sx
 #define IPIECE info->piece
 #define IX info->x
 #define IY info->y

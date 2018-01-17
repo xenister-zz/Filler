@@ -1,2 +1,7 @@
-seed = 429
-O: timedout
+seed = 8288
+X: error on input
+O: error on input
+./susivagn.filler: Segfault at 46
+./susivagn.filler won
+Score:
+46AGAINST0

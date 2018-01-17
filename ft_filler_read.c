@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 14:59:25 by susivagn          #+#    #+#             */
-/*   Updated: 2018/01/16 16:13:27 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/01/17 17:21:14 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ void    get_board(int fd, char *line, t_info *info)
     i = 0;
     SZBOARDY = ft_atoi(&line[8]);
     SZBOARDX = ft_atoi(&line[11]);
-    dprintf(info->fds, "board size1 = %d - board size2 = %d\n", SZBOARDY , SZBOARDX);
     while ((ret = get_next_line(fd, &line)) > 0)
     {
         if (line[0] == '0')
@@ -41,7 +40,6 @@ void    get_board(int fd, char *line, t_info *info)
         }
         if (i == SZBOARDY)
         {
-            dprintf(info->fds, "THERE i = %d \n", i);
             info->board = ft_addchartable(info->board, ft_memalloc(SZBOARDX, '\0'), (SZBOARDY + 1));
             break;
         }
@@ -57,6 +55,7 @@ void get_piece(int fd, char *line, t_info *info)
     i = 0;
     info->piece_sizey = ft_atoi(&line[6]);
     info->piece_sizex = ft_atoi(&line[8]);
+
     while ((ret = get_next_line(fd, &line)) > 0)
     {
         if ((line[0] == '.') || (line[0] == '*'))
@@ -64,10 +63,9 @@ void get_piece(int fd, char *line, t_info *info)
             info->piece = ft_addchartable(info->piece, line, SZBOARDY);
             i++;
         }
-        if (i == SZBOARDY)
+        if (i == SZPIECEY)
             break;
     }
-
 }
 
 int     filler_read(int fdr, t_info *info)
@@ -80,7 +78,6 @@ int     filler_read(int fdr, t_info *info)
     ret = 0;
     while ((ret = get_next_line(0, &line)) > 0)
     {
-        //dprintf(fdr, "%i\n", ret);
         if(info->player == 0)
             get_player(line, info);
         if (ft_strstr(line, "Plateau"))
