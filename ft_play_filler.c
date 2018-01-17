@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 16:31:06 by susivagn          #+#    #+#             */
-/*   Updated: 2018/01/17 17:41:30 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/01/17 20:51:18 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -176,7 +176,9 @@ int     check_piece_pos(t_info *info)
 int     chauffage(t_info *info)
 {
     int     i;
+    int        boo;
 
+    boo = 0;
     dprintf(info->fds, "*********SACHAUFFFEE********\n");
     i = -1;
     while (IBOARD[++i] && (IBOARD[i][0] == '.') && (IBOARD[i][0] != 'X') && (IBOARD[i][0] != 'O'))
@@ -190,6 +192,11 @@ int     chauffage(t_info *info)
     i = -1;
     while (IBOARD[SZBOARDY - 1][++i] && (IBOARD[SZBOARDY - 1][i] == '.') && (IBOARD[SZBOARDY - 1][i] != 'X') && (IBOARD[SZBOARDY - 1][i] != 'O'))
         IBOARD[SZBOARDY - 1][i] = '<';
+    while (info->board[boo])
+    {
+        dprintf(info->fds, "%s\n", info->board[boo++]);
+    }
+    boo = 0;
     dprintf(info->fds, "*********FAITTROPCHAUD********\n");
     return (0);
     

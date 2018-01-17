@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 14:59:25 by susivagn          #+#    #+#             */
-/*   Updated: 2018/01/17 17:21:14 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/01/17 20:51:51 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,11 +89,11 @@ int     filler_read(int fdr, t_info *info)
         }
     }
     boo = 0;
-    while (info->board[boo])
-    {
-        dprintf(fdr, "%s\n", info->board[boo++]);
-    }
-    boo = 0;
+    // while (info->board[boo])
+    // {
+    //     dprintf(fdr, "%s\n", info->board[boo++]);
+    // }
+    // boo = 0;
     while (info->piece[boo])
     {
         dprintf(fdr, "%s\n", info->piece[boo++]);

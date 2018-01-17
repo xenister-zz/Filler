@@ -1,7 +1,6 @@
-seed = 8288
-X: error on input
+seed = 197
 O: error on input
-./susivagn.filler: Segfault at 46
+./susivagn.filler: Segfault at 330
 ./susivagn.filler won
 Score:
-46AGAINST0
+330AGAINST0
