@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 16:31:06 by susivagn          #+#    #+#             */
-/*   Updated: 2018/01/17 20:51:18 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/01/18 16:59:14 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -173,33 +173,90 @@ int     check_piece_pos(t_info *info)
     return(1);
 }
 
-int     chauffage(t_info *info)
-{
-    int     i;
-    int        boo;
+// int     chauffage(t_info *info)
+// {
+//     int     i;
+//     int        boo;
 
-    boo = 0;
-    dprintf(info->fds, "*********SACHAUFFFEE********\n");
-    i = -1;
-    while (IBOARD[++i] && (IBOARD[i][0] == '.') && (IBOARD[i][0] != 'X') && (IBOARD[i][0] != 'O'))
-        IBOARD[i][0] = '<';
-    i = -1;
-    while (IBOARD[0][++i] && (IBOARD[0][i] == '.') && (IBOARD[0][i] != 'X') && (IBOARD[0][i] != 'O'))
-        IBOARD[0][i] = '<';
-    i = -1;
-    while (IBOARD[++i][SZBOARDX - 1] && (IBOARD[i][SZBOARDX - 1] == '.') && (IBOARD[i][SZBOARDX - 1] != 'X') && (IBOARD[i][SZBOARDX - 1] != 'O'))
-        IBOARD[i][SZBOARDX] = '<';
-    i = -1;
-    while (IBOARD[SZBOARDY - 1][++i] && (IBOARD[SZBOARDY - 1][i] == '.') && (IBOARD[SZBOARDY - 1][i] != 'X') && (IBOARD[SZBOARDY - 1][i] != 'O'))
-        IBOARD[SZBOARDY - 1][i] = '<';
-    while (info->board[boo])
-    {
-        dprintf(info->fds, "%s\n", info->board[boo++]);
-    }
-    boo = 0;
-    dprintf(info->fds, "*********FAITTROPCHAUD********\n");
-    return (0);
+//     boo = 0;
+//     dprintf(info->fds, "*********SACHAUFFFEE********\n");
+//     i = -1;
+//     while (IBOARD[++i] && (IBOARD[i][0] == '.') && (IBOARD[i][0] != 'X') && (IBOARD[i][0] != 'O'))
+//         IBOARD[i][0] = '<';
+//     i = -1;
+//     while (IBOARD[0][++i] && (IBOARD[0][i] == '.') && (IBOARD[0][i] != 'X') && (IBOARD[0][i] != 'O'))
+//         IBOARD[0][i] = '<';
+//     i = -1;
+//     while (IBOARD[++i][SZBOARDX - 1] && (IBOARD[i][SZBOARDX - 1] == '.') && (IBOARD[i][SZBOARDX - 1] != 'X') && (IBOARD[i][SZBOARDX - 1] != 'O'))
+//         IBOARD[i][SZBOARDX] = '<';
+//     i = -1;
+//     while (IBOARD[SZBOARDY - 1][++i] && (IBOARD[SZBOARDY - 1][i] == '.') && (IBOARD[SZBOARDY - 1][i] != 'X') && (IBOARD[SZBOARDY - 1][i] != 'O'))
+//         IBOARD[SZBOARDY - 1][i] = '<';
+//     while (info->board[boo])
+//     {
+//         dprintf(info->fds, "%s\n", info->board[boo++]);
+//     }
+//     boo = 0;
+//     dprintf(info->fds, "*********FAITTROPCHAUD********\n");
+//     return (0);
     
+// }
+
+int        chauffage_border(t_info *info)
+{
+    int     y;
+    int     x;
+    int     boo;
+
+    y = 0;
+    while (IBOARD[y])
+    {
+        x = 0;
+        while (IBOARD[y][x])
+        {
+            if ((y == 0 || y == (SZBOARDY - 1)) && (IBOARD[y][x] == '.'))
+                IBOARD[y][x] = '<';
+            else if ((x == 0 || x == (SZBOARDX - 1)) && (IBOARD[y][x] == '.'))
+                IBOARD[y][x] = '<';
+            x++;
+        }
+        y++;
+    }
+    return (0);
+
+}
+
+int        chauffage_enemy(t_info *info)
+{
+    int     y;
+    int     x;
+    int     boo;
+    char    c;
+
+    y = 0;
+    c = info->player == 1 ? 'O' : 'X';
+    while (IBOARD[y])
+    {
+        x = 0;
+        while (IBOARD[y][x])
+        {
+            if (IBOARD[y][x] == c)
+            {
+                if ((IBOARD[y][x - 1]) && IBOARD[y][x - 1] == '.')
+                    IBOARD[y][x] = '@';
+                if ((IBOARD[y][x + 1]) && IBOARD[y][x + 1] == '.')
+                    IBOARD[y][x] = '@';
+                if ((IBOARD[y - 1][x]) && IBOARD[y - 1][x] == '.')
+                    IBOARD[y][x] = '@';
+                if ((IBOARD[y + 1][x]) && IBOARD[y + 1][x] == '.')
+                    IBOARD[y][x] = '@';
+            }
+            x++;
+        }
+        y++;
+    }
+    return (0);
+
 }
 
 void    ft_set_score(t_info *info)
@@ -221,7 +278,8 @@ int    play_filler(int fdr, t_info *info)
     info->margin = 0;
     SCORE = 0;
     F_SCORE = 0;
-    chauffage(info);
+    chauffage_enemy(info);
+    chauffage_border(info);
     dprintf(fdr, "*PLAY FILLER START*\n");
     while (IBOARD[IY])
     {
