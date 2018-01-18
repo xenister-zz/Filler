@@ -1,5 +1,2 @@
-seed = 3108
-O: error on input
-players/superjeannot.filler won
-Score:
-0AGAINST324
+seed = 4491
+./susivagn.filler: Segfault at 219

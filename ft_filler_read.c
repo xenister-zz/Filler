@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 14:59:25 by susivagn          #+#    #+#             */
-/*   Updated: 2018/01/17 20:51:51 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/01/18 19:24:02 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,19 @@
 
 void    get_player(char *line, t_info *info)
 {
+    dprintf(info->fds, "*********************************\n");
     if (ft_strstr(line, "p1"))
-        info->player = 1;
+    {
+        info->player = 'O';
+        info->enemy = 'X';
+    }
     else
-        info->player = 2;
-    dprintf(info->fds, "players ================== %d\n", info->player);
+    {
+        info->player = 'X';
+        info->enemy = 'O';
+    }
+    dprintf(info->fds, "players ================== %c\n", info->player);
+    dprintf(info->fds, "enemy ================== %c\n", info->enemy);
 }
 
 void    get_board(int fd, char *line, t_info *info)
@@ -29,6 +37,7 @@ void    get_board(int fd, char *line, t_info *info)
 
     ret = 0;
     i = 0;
+    dprintf(info->fds, "-----------------------------------------\n");
     SZBOARDY = ft_atoi(&line[8]);
     SZBOARDX = ft_atoi(&line[11]);
     while ((ret = get_next_line(fd, &line)) > 0)
@@ -44,6 +53,7 @@ void    get_board(int fd, char *line, t_info *info)
             break;
         }
     }
+    dprintf(info->fds, "999999999999999999999999999999999999999999999999\n");
 }
 
 void get_piece(int fd, char *line, t_info *info)
@@ -53,6 +63,7 @@ void get_piece(int fd, char *line, t_info *info)
 
     ret = 0;
     i = 0;
+    dprintf(info->fds, "+++++++++++++++++++++++++++++++++++++++\n");
     info->piece_sizey = ft_atoi(&line[6]);
     info->piece_sizex = ft_atoi(&line[8]);
 
@@ -66,37 +77,30 @@ void get_piece(int fd, char *line, t_info *info)
         if (i == SZPIECEY)
             break;
     }
+    dprintf(info->fds, "||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n");
 }
 
 int     filler_read(int fdr, t_info *info)
 {
     int     ret;
     char    *line;
-    int     boo;
 
-    boo = 0;
     ret = 0;
     while ((ret = get_next_line(0, &line)) > 0)
     {
-        if(info->player == 0)
+        dprintf(info->fds, "*%s*\n", line);
+        if(IP == 0)
             get_player(line, info);
         if (ft_strstr(line, "Plateau"))
+        {
+            dprintf(info->fds, "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n");
             get_board(0, line, info);
+        }
         if (ft_strstr(line, "Piece"))
         {
             get_piece(0, line, info);
             break;
         }
-    }
-    boo = 0;
-    // while (info->board[boo])
-    // {
-    //     dprintf(fdr, "%s\n", info->board[boo++]);
-    // }
-    // boo = 0;
-    while (info->piece[boo])
-    {
-        dprintf(fdr, "%s\n", info->piece[boo++]);
     }
     return (0);
 }

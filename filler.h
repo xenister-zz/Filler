@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 15:04:04 by susivagn          #+#    #+#             */
-/*   Updated: 2018/01/17 11:59:59 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/01/18 18:31:35 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@
 #define MAR info->margin
 #define MX info->marginx
 #define MY info->marginy
+#define IP info->player
+#define IE info->enemy
 
 typedef struct  s_info
 {
@@ -42,7 +44,8 @@ typedef struct  s_info
     int     board_sizex;
     int     ok;
     int     okcount;
-    int     player;
+    char    player;
+    char    enemy; 
     char    **piece;
     int     piece_sizey;
     int     piece_sizex;

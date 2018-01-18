@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 18:21:39 by susivagn          #+#    #+#             */
-/*   Updated: 2018/01/17 17:23:32 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/01/18 19:34:33 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int     main ()
     info = ft_memalloc(sizeof(t_info), 0);
     info->fds = open("./patate", O_CREAT | O_RDWR | O_TRUNC, 0666);
     line = NULL;
+    IP = 0;
     F_SCORE = 0;
     SCORE= 0;
     dprintf(info->fds, "STARTING WHILE\n");
@@ -40,6 +41,7 @@ int     main ()
         }
         if (F_SCORE != 0)
         {
+            dprintf(info->fds, "SORTIE NO MARGIN =============== %d * %d\n", SY, SX);
             dprintf(info->fds, "SORTIE =============== %d * %d | I== %d\n", (SY - MY), (SX - MX), i);
             ft_printf("%d %d\n", (SY - MY), (SX - MX));
         }

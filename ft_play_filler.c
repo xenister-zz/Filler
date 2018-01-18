@@ -6,67 +6,13 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 16:31:06 by susivagn          #+#    #+#             */
-/*   Updated: 2018/01/18 16:59:14 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/01/18 19:41:32 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./filler.h"
 
-// int     if_validep1(int y, int x, t_info *info)
-// {
-//     dprintf(info->fds, "CHECK VALID\n");
-//     if (!(IBOARD[IY + (y - MY)][IX + (x - MX)]))
-//         {
-//             dprintf(info->fds, "            ITS NULL\n");
-//             return (0);
-//         }
-//     if (IBOARD[IY + (y - MY)][IX + (x - MX)] == 'X')
-//         {
-//             dprintf(info->fds, "            ITS *X*\n");
-//             return (0);
-//         }
-//     if (IBOARD[IY + (y - MY)][IX + (x - MX)] == 'O')
-//         {
-//             dprintf(info->fds, "            ITS *O*\n");
-//             info->okcount++;
-//             return(1);
-//         }
-//     if (IBOARD[IY + (y - MY)][IX + (x - MX)] == '.')
-//         {
-//             dprintf(info->fds, "            VALID ZONE\n");
-//             return (1);
-//         }
-//     return (0);
-// }
-
-// int     if_validep2(int y, int x, t_info *info)
-// {
-//     dprintf(info->fds, "CHECK VALID\n");
-//     if (!(IBOARD[IY + (y - MY)][IX + (x - MX)]))
-//         {
-//             dprintf(info->fds, "            ITS NULL\n");
-//             return (0);
-//         }
-//     if (IBOARD[IY + (y - MY)][IX + (x - MX)] == 'O')
-//         {
-//             dprintf(info->fds, "            ITS *X*\n");
-//             return (0);
-//         }
-//     if (IBOARD[IY + (y - MY)][IX + (x - MX)] == 'X')
-//         {
-//             dprintf(info->fds, "            ITS *O*\n");
-//             info->okcount++;
-//             return(1);
-//         }
-//     if (IBOARD[IY + (y - MY)][IX + (x - MX)] == '.')
-//         {
-//             dprintf(info->fds, "            VALID ZONE\n");
-//             return (1);
-//         }
-//     return (0);
-// }
-
-int     if_validep1(int y, int x, t_info *info)
+int     if_valide(int y, int x, t_info *info)
 {
     //dprintf(info->fds, "CHECK VALID ON %d - %d\n", IY, IX);
     if (!(IBOARD[IY + (y - MY)][IX + (x - MX)]))
@@ -74,19 +20,19 @@ int     if_validep1(int y, int x, t_info *info)
             //dprintf(info->fds, "            ITS NULL\n");
             return (0);
         }
-    if (IBOARD[IY + (y - MY)][IX + (x - MX)] == 'X')
+    if (IBOARD[IY + (y - MY)][IX + (x - MX)] == IE)
         {
             //dprintf(info->fds, "            ITS *X*\n");
             return (0);
         }
-    if (IBOARD[IY + (y - MY)][IX + (x - MX)] == 'O')
+    if (IBOARD[IY + (y - MY)][IX + (x - MX)] == IP)
         {
             //dprintf(info->fds, "            ITS *O*\n");
             info->okcount++;
             SCORE += 46;
             return(1);
         }
-    if (IBOARD[IY + (y - MY)][IX + (x - MX)] == '.')
+    if (IBOARD[IY + (y - MY)][IX + (x - MX)] != IE)
         {  
             SCORE += IBOARD[IY + (y - MY)][IX + (x - MX)];
             //dprintf(info->fds, "            VALID SCORE = %d\n", SCORE);
@@ -94,36 +40,6 @@ int     if_validep1(int y, int x, t_info *info)
         }
     return (0);
 }
-
-int     if_validep2(int y, int x, t_info *info)
-{
-    //dprintf(info->fds, "CHECK VALID ON %d - %d\n", IY, IX);
-    if (!(IBOARD[IY + (y - MY)][IX + (x - MX)]))
-        {
-            //dprintf(info->fds, "            ITS NULL\n");
-            return (0);
-        }
-    if (IBOARD[IY + (y - MY)][IX + (x - MX)] == 'O')
-        {
-            //dprintf(info->fds, "            ITS *X*\n");
-            return (0);
-        }
-    if (IBOARD[IY + (y - MY)][IX + (x - MX)] == 'X')
-        {
-            //dprintf(info->fds, "            ITS *X*\n");
-            SCORE += 46;
-            info->okcount++;
-            return(1);
-        }
-    if (IBOARD[IY + (y - MY)][IX + (x - MX)] == '.')
-        {
-            SCORE += IBOARD[IY + (y - MY)][IX + (x - MX)];
-            //dprintf(info->fds, "            VALID SCORE = %d\n", SCORE);
-            return (1);
-        }
-    return (0);
-}
-
 
 int     check_piece_pos(t_info *info)
 {
@@ -153,54 +69,17 @@ int     check_piece_pos(t_info *info)
                 MX = x;
                 MY = y;
             }
-            if (info->player == 1)
-            {
-                if ((IPIECE[y][x] == '*') && (nbpiece--) && ((if_validep1(y, x, info) != 1)))
-                    return (0);
-            }
-            else
-            {
-                if ((IPIECE[y][x] == '*') && (nbpiece--) && ((if_validep2(y, x, info) != 1)))
-                    return (0);
-            }
+            if ((IPIECE[y][x] == '*') && (nbpiece--) && ((if_valide(y, x, info) != 1)))
+                return (0);
             x++;
         }
         y++;
     }
     if (info->okcount != 1)
         return (0);
-    dprintf(info->fds, " SORTIE ----------------------------DE CHECK PIECE*\n");
+    //dprintf(info->fds, " SORTIE ----------------------------DE CHECK PIECE*\n");
     return(1);
 }
-
-// int     chauffage(t_info *info)
-// {
-//     int     i;
-//     int        boo;
-
-//     boo = 0;
-//     dprintf(info->fds, "*********SACHAUFFFEE********\n");
-//     i = -1;
-//     while (IBOARD[++i] && (IBOARD[i][0] == '.') && (IBOARD[i][0] != 'X') && (IBOARD[i][0] != 'O'))
-//         IBOARD[i][0] = '<';
-//     i = -1;
-//     while (IBOARD[0][++i] && (IBOARD[0][i] == '.') && (IBOARD[0][i] != 'X') && (IBOARD[0][i] != 'O'))
-//         IBOARD[0][i] = '<';
-//     i = -1;
-//     while (IBOARD[++i][SZBOARDX - 1] && (IBOARD[i][SZBOARDX - 1] == '.') && (IBOARD[i][SZBOARDX - 1] != 'X') && (IBOARD[i][SZBOARDX - 1] != 'O'))
-//         IBOARD[i][SZBOARDX] = '<';
-//     i = -1;
-//     while (IBOARD[SZBOARDY - 1][++i] && (IBOARD[SZBOARDY - 1][i] == '.') && (IBOARD[SZBOARDY - 1][i] != 'X') && (IBOARD[SZBOARDY - 1][i] != 'O'))
-//         IBOARD[SZBOARDY - 1][i] = '<';
-//     while (info->board[boo])
-//     {
-//         dprintf(info->fds, "%s\n", info->board[boo++]);
-//     }
-//     boo = 0;
-//     dprintf(info->fds, "*********FAITTROPCHAUD********\n");
-//     return (0);
-    
-// }
 
 int        chauffage_border(t_info *info)
 {
@@ -209,18 +88,28 @@ int        chauffage_border(t_info *info)
     int     boo;
 
     y = 0;
+    boo = 0;
     while (IBOARD[y])
     {
         x = 0;
         while (IBOARD[y][x])
         {
-            if ((y == 0 || y == (SZBOARDY - 1)) && (IBOARD[y][x] == '.'))
+            if ((y == 1 || y == (SZBOARDY - 2)) && (IBOARD[y][x] == '.'))
                 IBOARD[y][x] = '<';
-            else if ((x == 0 || x == (SZBOARDX - 1)) && (IBOARD[y][x] == '.'))
+            else if ((x == 1 || x == (SZBOARDX - 2)) && (IBOARD[y][x] == '.'))
                 IBOARD[y][x] = '<';
             x++;
         }
         y++;
+    }
+    while (info->board[boo])
+    {
+        dprintf(info->fds, "%s\n", info->board[boo++]);
+    }
+    boo = 0;
+    while (info->piece[boo])
+    {
+        dprintf(info->fds, "%s\n", info->piece[boo++]);
     }
     return (0);
 
@@ -231,25 +120,23 @@ int        chauffage_enemy(t_info *info)
     int     y;
     int     x;
     int     boo;
-    char    c;
 
     y = 0;
-    c = info->player == 1 ? 'O' : 'X';
     while (IBOARD[y])
     {
         x = 0;
         while (IBOARD[y][x])
         {
-            if (IBOARD[y][x] == c)
+            if (IBOARD[y][x] == IE)
             {
                 if ((IBOARD[y][x - 1]) && IBOARD[y][x - 1] == '.')
-                    IBOARD[y][x] = '@';
+                    IBOARD[y][x - 1] = '@';
                 if ((IBOARD[y][x + 1]) && IBOARD[y][x + 1] == '.')
-                    IBOARD[y][x] = '@';
+                    IBOARD[y][x + 1] = '@';
                 if ((IBOARD[y - 1][x]) && IBOARD[y - 1][x] == '.')
-                    IBOARD[y][x] = '@';
+                    IBOARD[y - 1][x] = '@';
                 if ((IBOARD[y + 1][x]) && IBOARD[y + 1][x] == '.')
-                    IBOARD[y][x] = '@';
+                    IBOARD[y + 1][x] = '@';
             }
             x++;
         }
@@ -261,12 +148,12 @@ int        chauffage_enemy(t_info *info)
 
 void    ft_set_score(t_info *info)
 {
-    dprintf(info->fds, "*----IY == %d | *----IX == %d \n", IY, IX);
+    //dprintf(info->fds, "*----IY == %d | *----IX == %d \n", IY, IX);
     F_SCORE = SCORE;
     SCORE = 0;
     SY = IY;
     SX = IX;
-    dprintf(info->fds, "*----FSCORE == %d*\n", F_SCORE);
+    //dprintf(info->fds, "*----FSCORE == %d*\n", F_SCORE);
 }
 
 int    play_filler(int fdr, t_info *info)
