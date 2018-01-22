@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 16:31:06 by susivagn          #+#    #+#             */
-/*   Updated: 2018/01/18 19:41:32 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/01/22 19:52:19 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,25 @@
 
 int     if_valide(int y, int x, t_info *info)
 {
-    //dprintf(info->fds, "CHECK VALID ON %d - %d\n", IY, IX);
-    if (!(IBOARD[IY + (y - MY)][IX + (x - MX)]))
+    y = y - MY;
+    x = x - MX;
+    if (!(IBOARD[IY + y]) || !(IBOARD[IY + y][IX + x]))
         {
-            //dprintf(info->fds, "            ITS NULL\n");
             return (0);
         }
-    if (IBOARD[IY + (y - MY)][IX + (x - MX)] == IE)
+    if (IBOARD[IY + y][IX + x] == IE)
         {
-            //dprintf(info->fds, "            ITS *X*\n");
             return (0);
         }
-    if (IBOARD[IY + (y - MY)][IX + (x - MX)] == IP)
+    if (IBOARD[IY + y][IX + x] == IP)
         {
-            //dprintf(info->fds, "            ITS *O*\n");
             info->okcount++;
             SCORE += 46;
             return(1);
         }
-    if (IBOARD[IY + (y - MY)][IX + (x - MX)] != IE)
+    if (IBOARD[IY + y][IX + x] == '.' || IBOARD[IY + y][IX + x] == '@' || IBOARD[IY + y][IX + x] == '<')
         {  
-            SCORE += IBOARD[IY + (y - MY)][IX + (x - MX)];
-            //dprintf(info->fds, "            VALID SCORE = %d\n", SCORE);
+            SCORE += IBOARD[IY + y][IX + x];
             return (1);
         }
     return (0);
@@ -48,6 +45,7 @@ int     check_piece_pos(t_info *info)
     int     nbpiece;
 
     y = 0;
+
     nbpiece = 0;
     info->ok = 1;
     info->okcount = 0;
@@ -68,6 +66,7 @@ int     check_piece_pos(t_info *info)
                 MAR = 1;
                 MX = x;
                 MY = y;
+                dprintf(info->fds, "MARGIN ===== %d * %d \n", MY, MX);
             }
             if ((IPIECE[y][x] == '*') && (nbpiece--) && ((if_valide(y, x, info) != 1)))
                 return (0);
@@ -76,8 +75,9 @@ int     check_piece_pos(t_info *info)
         y++;
     }
     if (info->okcount != 1)
+    {
         return (0);
-    //dprintf(info->fds, " SORTIE ----------------------------DE CHECK PIECE*\n");
+    }
     return(1);
 }
 
@@ -86,30 +86,26 @@ int        chauffage_border(t_info *info)
     int     y;
     int     x;
     int     boo;
+    char       c;
 
     y = 0;
     boo = 0;
-    while (IBOARD[y])
+    if (info->plateau == 1)
+        c = '[';
+    else
+        c = '<';
+    while ((IBOARD) && IBOARD[y])
     {
         x = 0;
-        while (IBOARD[y][x])
+        while ((IBOARD) && IBOARD[y] && IBOARD[y][x])
         {
             if ((y == 1 || y == (SZBOARDY - 2)) && (IBOARD[y][x] == '.'))
-                IBOARD[y][x] = '<';
+                IBOARD[y][x] = c;
             else if ((x == 1 || x == (SZBOARDX - 2)) && (IBOARD[y][x] == '.'))
-                IBOARD[y][x] = '<';
+                IBOARD[y][x] = c;
             x++;
         }
         y++;
-    }
-    while (info->board[boo])
-    {
-        dprintf(info->fds, "%s\n", info->board[boo++]);
-    }
-    boo = 0;
-    while (info->piece[boo])
-    {
-        dprintf(info->fds, "%s\n", info->piece[boo++]);
     }
     return (0);
 
@@ -122,20 +118,20 @@ int        chauffage_enemy(t_info *info)
     int     boo;
 
     y = 0;
-    while (IBOARD[y])
+    while ((IBOARD) && IBOARD[y])
     {
         x = 0;
-        while (IBOARD[y][x])
+        while ((IBOARD) && IBOARD[y] && IBOARD[y][x])
         {
             if (IBOARD[y][x] == IE)
             {
                 if ((IBOARD[y][x - 1]) && IBOARD[y][x - 1] == '.')
                     IBOARD[y][x - 1] = '@';
-                if ((IBOARD[y][x + 1]) && IBOARD[y][x + 1] == '.')
+                else if ((IBOARD[y][x + 1]) && IBOARD[y][x + 1] == '.')
                     IBOARD[y][x + 1] = '@';
-                if ((IBOARD[y - 1][x]) && IBOARD[y - 1][x] == '.')
+                else if ((IBOARD[y - 1][x]) && IBOARD[y - 1][x] == '.')
                     IBOARD[y - 1][x] = '@';
-                if ((IBOARD[y + 1][x]) && IBOARD[y + 1][x] == '.')
+                else if ((IBOARD[y + 1][x]) && IBOARD[y + 1][x] == '.')
                     IBOARD[y + 1][x] = '@';
             }
             x++;
@@ -148,12 +144,10 @@ int        chauffage_enemy(t_info *info)
 
 void    ft_set_score(t_info *info)
 {
-    //dprintf(info->fds, "*----IY == %d | *----IX == %d \n", IY, IX);
     F_SCORE = SCORE;
     SCORE = 0;
     SY = IY;
     SX = IX;
-    //dprintf(info->fds, "*----FSCORE == %d*\n", F_SCORE);
 }
 
 int    play_filler(int fdr, t_info *info)
@@ -161,34 +155,37 @@ int    play_filler(int fdr, t_info *info)
     int     i;
 
     i = 0;
-    info->y = 0;
+    IY = 0;
     info->margin = 0;
     SCORE = 0;
     F_SCORE = 0;
+    SY = 0;
+    SX = 0;
+    dprintf(fdr, "*START---CHAUFFAGE--ENNEMIE------------*\n");
     chauffage_enemy(info);
+    dprintf(fdr, "*END---CHAUFFAGE--ENNEMIE-+++++++++++++*\n");
     chauffage_border(info);
     dprintf(fdr, "*PLAY FILLER START*\n");
-    while (IBOARD[IY])
+    while ((IBOARD) && IBOARD[IY])
     {
         IX = 0;
-        while (IBOARD[IY][IX])
+        while ((IBOARD) && IBOARD[IY][IX])
         {
             if (check_piece_pos(info) == 1)
             {
                 if ((SCORE >= F_SCORE) && (info->okcount == 1))
                     ft_set_score(info);
             }
+            dprintf(info->fds, "BOARD Y == %d | X == %d \n", IY, IX);
             if ((F_SCORE == 0) && ((IY == SZBOARDY - 1) && (IX == SZBOARDX - 1)))
             {
-                dprintf(fdr, " --------------------------------WAKAWAWE*\n");
+                dprintf(info->fds, "EXIT ON IF ON PLAY FILLER -%d-----\n", F_SCORE);
                 return(2);
             }
-            //ft_check_pos();
             IX++;
         }
         IY++;
     }
-    dprintf(info->fds, " -------------ILSORTNORMAL*\n");
-    dprintf(info->fds, " ---------FSCORE ====== %d*\n", F_SCORE);
+    dprintf(info->fds, "NORMAL EXIT ON PLAY FILLER -%d----- \n", F_SCORE);
     return(1);
 }

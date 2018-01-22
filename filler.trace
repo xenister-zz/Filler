@@ -1,2 +1,6 @@
-seed = 4491
-./susivagn.filler: Segfault at 219
+seed = 2867
+O: error on input
+./susivagn.filler: Segfault at 21
+players/abanlin.filler won
+Score:
+21AGAINST286

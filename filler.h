@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 15:04:04 by susivagn          #+#    #+#             */
-/*   Updated: 2018/01/18 18:31:35 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/01/22 19:54:49 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@
 typedef struct  s_info
 {
     char    **board;
+    int     plateau;
     int     board_sizey;
     int     board_sizex;
     int     ok;
@@ -59,6 +60,7 @@ typedef struct  s_info
     int     marginx;
     int     marginy;
     int     fds;
+    int     fdd;
 }               t_info;
 
 void            get_player(char *line, t_info *info);
