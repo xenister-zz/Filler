@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 14:59:25 by susivagn          #+#    #+#             */
-/*   Updated: 2018/01/22 19:55:33 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/01/23 14:59:35 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ void    get_board(int fd, char *line, t_info *info)
     i = 0;
     info->plateau = 0;
     SZBOARDY = ft_atoi(&line[8]);
-    dprintf(info->fds, "SIZEBOARD---%d\n", SZBOARDY);
     if (SZBOARDY == 15)
         info->plateau = 1;
     else
@@ -44,7 +43,6 @@ void    get_board(int fd, char *line, t_info *info)
     SZBOARDX = ft_atoi(&line[11]);
     while ((ret = get_next_line(fd, &line)) > 0)
     {
-        dprintf(info->fdd, "%s\n", line);
         if (line[0] == '0')
         {
             info->board = ft_addchartable(info->board, &line[4], SZBOARDY + 1);
@@ -70,7 +68,6 @@ void get_piece(int fd, char *line, t_info *info)
 
     while ((ret = get_next_line(fd, &line)) > 0)
     {
-        dprintf(info->fdd, "%s\n", line);
         if ((line[0] == '.') || (line[0] == '*'))
         {
             info->piece = ft_addchartable(info->piece, line, SZBOARDY);
@@ -91,7 +88,6 @@ int     filler_read(int fdr, t_info *info)
     ret = 0;
     while ((ret = get_next_line(0, &line)) > 0)
     {
-        dprintf(info->fdd, "%s\n", line);
         if(IP == 0)
             get_player(line, info);
         if (ft_strstr(line, "Plateau"))
@@ -104,16 +100,5 @@ int     filler_read(int fdr, t_info *info)
             break;
         }
     }
-    // while (info->board[boo])
-    // {
-    //     dprintf(info->fds, "%s\n", info->board[boo++]);
-    // }
-    // boo = 0;
-    dprintf(info->fds, "\n");
-    while (info->piece[boo])
-    {
-        dprintf(info->fds, "%s\n", info->piece[boo++]);
-    }
-    dprintf(info->fds, "\n");
     return (0);
 }
