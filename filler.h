@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 15:04:04 by susivagn          #+#    #+#             */
-/*   Updated: 2018/01/22 19:54:49 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/01/23 18:15:52 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@
 #define SZPIECEX info->piece_sizex
 #define SCORE info->score
 #define F_SCORE info->finalscore
-#define SY info->Sy
-#define SX info->Sx
+#define SY info->sy
+#define SX info->sx
 #define IPIECE info->piece
 #define IX info->x
 #define IY info->y
@@ -54,22 +54,25 @@ typedef struct  s_info
     int     y;
     int     score;
     int     finalscore;
-    int     Sx;
-    int     Sy;
+    int     sx;
+    int     sy;
     int     margin;
     int     marginx;
     int     marginy;
     int     fds;
-    int     fdd;
-}               t_info;
+    int		fdd;
+}				t_info;
 
-void            get_player(char *line, t_info *info);
-int             filler_read(int fdr, t_info *info);
-void            get_board(int fd, char *line, t_info *info);
-void            get_piece(int fd, char *line, t_info *info);
-int             play_filler(int fdr, t_info *info);
-int             if_valide(int y, int x, t_info *info);
-int             check_piece_pos(t_info *info);
-int             chauffage(t_info *info);
+void			get_player(char *line, t_info *info);
+int				filler_read(int fdr, t_info *info);
+void			get_board(int fd, char *line, t_info *info);
+void			get_piece(int fd, char *line, t_info *info);
+int				play_filler(int fdr, t_info *info);
+int				if_valide(int y, int x, t_info *info);
+int				check_piece_pos(t_info *info);
+int				chauffage_enemy(t_info *info);
+int				chauffage_border(t_info *info);
+void			ft_set_score(t_info *info);
+void			init_struct(t_info *info);
 
 #endif
