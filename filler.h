@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 15:04:04 by susivagn          #+#    #+#             */
-/*   Updated: 2018/01/23 18:15:52 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/01/24 12:43:37 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,8 +69,8 @@ void			get_board(int fd, char *line, t_info *info);
 void			get_piece(int fd, char *line, t_info *info);
 int				play_filler(int fdr, t_info *info);
 int				if_valide(int y, int x, t_info *info);
-int				check_piece_pos(t_info *info);
-int				chauffage_enemy(t_info *info);
+int		        check_piece_pos(int	x, int y, t_info *info);
+int             chauffage_enemy(int x, int y, t_info *info);
 int				chauffage_border(t_info *info);
 void			ft_set_score(t_info *info);
 void			init_struct(t_info *info);
