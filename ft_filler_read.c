@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 14:59:25 by susivagn          #+#    #+#             */
-/*   Updated: 2018/01/24 12:51:31 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/01/25 20:49:13 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,13 +42,14 @@ void	get_board(int fd, char *line, t_info *info)
 	{
 		if (line[0] == '0')
 		{
-			info->board = ft_addchartable(info->board, &line[4], SZBOARDY + 1);
+			info->board = ft_addchartable(info->board, line + 4,
+				SZBOARDY + 1);
 			i++;
 		}
 		if (i == SZBOARDY)
 		{
 			info->board = ft_addchartable(info->board,
-				ft_memalloc(SZBOARDX, '\0'), (SZBOARDY + 1));
+				ft_memalloc(SZBOARDX + 1, '\0'), (SZBOARDY + 1));
 			break ;
 		}
 	}
@@ -67,7 +68,8 @@ void	get_piece(int fd, char *line, t_info *info)
 	{
 		if ((line[0] == '.') || (line[0] == '*'))
 		{
-			info->piece = ft_addchartable(info->piece, line, SZBOARDY);
+			info->piece = ft_addchartable(info->piece, line,
+				SZBOARDY);
 			i++;
 		}
 		if (i == SZPIECEY)

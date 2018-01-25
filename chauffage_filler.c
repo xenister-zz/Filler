@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/23 18:01:29 by susivagn          #+#    #+#             */
-/*   Updated: 2018/01/25 16:39:14 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/01/25 20:43:47 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,12 +67,24 @@ int		chauffage_enemy(int x, int y, t_info *info)
 	return (0);
 }
 
-void	free_tab(char **tab, size_t size)
+void	free_board(t_info *info, char **tab, int size)
 {
-	while (size >= 0 && tab[size] != NULL)
+	while (--size > 0)
 	{
-		ft_bzero(tab[size], ft_strlen(tab[size]));
+		// dprintf(info->fds, "FREE PRE: %p\n", info->board);
+		//dprintf(info->fds, "FREE: %p\n", *(info->board) + size);
+		free(tab[size] - 4);
+	}
+	free(tab[SZBOARDY]);
+	free(tab);
+}
+
+void	free_tab(t_info *info, char **tab, int size)
+{
+	while (size > 0)
+	{
 		free(tab[size]);
 		size--;
 	}
+	free(tab);
 }

@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 16:03:48 by susivagn          #+#    #+#             */
-/*   Updated: 2018/01/04 14:48:35 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/01/25 20:47:42 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 char        **ft_addchartable(char **table, char *toadd, int size)
 {
     int     i;
-
     i = 0;
     if (!toadd)
         return (table);
@@ -24,7 +23,7 @@ char        **ft_addchartable(char **table, char *toadd, int size)
         table = (char**)ft_memalloc((size + 1) * (sizeof(char*)), '\0');
         table[size] = NULL;
     }
-    while(table[i] && (table[i][0] != '\0'))
+    while(table[i] != NULL)
         i++;
     table[i] = toadd;
     return (table);
