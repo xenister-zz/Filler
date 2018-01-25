@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 18:21:39 by susivagn          #+#    #+#             */
-/*   Updated: 2018/01/25 14:50:55 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/01/25 16:43:00 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,8 +57,9 @@ int		main(void)
 			break ;
 		if (F_SCORE != 0)
 			ft_printf("%d %d\n", (SY - MY), (SX - MX));
-		IBOARD = NULL;
-		IPIECE = NULL;
+		free_tab(IBOARD, SZBOARDY + 1);
+		free_tab(IPIECE, SZPIECEY);
 	}
+	ft_bzero(info, sizeof(t_info));
 	return (0);
 }

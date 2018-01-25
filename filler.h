@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 15:04:04 by susivagn          #+#    #+#             */
-/*   Updated: 2018/01/24 12:43:37 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/01/25 16:40:12 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,5 +74,6 @@ int             chauffage_enemy(int x, int y, t_info *info);
 int				chauffage_border(t_info *info);
 void			ft_set_score(t_info *info);
 void			init_struct(t_info *info);
+void	        free_tab(char **tab, size_t size);
 
 #endif

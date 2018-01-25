@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/23 18:01:29 by susivagn          #+#    #+#             */
-/*   Updated: 2018/01/25 15:56:38 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/01/25 16:39:14 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,4 +65,14 @@ int		chauffage_enemy(int x, int y, t_info *info)
 		y++;
 	}
 	return (0);
+}
+
+void	free_tab(char **tab, size_t size)
+{
+	while (size >= 0 && tab[size] != NULL)
+	{
+		ft_bzero(tab[size], ft_strlen(tab[size]));
+		free(tab[size]);
+		size--;
+	}
 }
