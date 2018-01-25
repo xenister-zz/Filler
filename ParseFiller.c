@@ -6,12 +6,14 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 18:21:39 by susivagn          #+#    #+#             */
-/*   Updated: 2018/01/25 16:43:00 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/01/25 20:59:45 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./LibftXen/ft_printf.h"
 #include "./filler.h"
+
+int fdinfo;
 
 void	ft_set_score(t_info *info)
 {
@@ -43,7 +45,7 @@ int		main(void)
 	t_info	*info;
 
 	info = ft_memalloc(sizeof(t_info), 0);
-	//info->fds = open("./patate", O_CREAT | O_RDWR | O_TRUNC, 0666);
+	info->fds = open("./patate", O_CREAT | O_RDWR | O_TRUNC, 0666);
 	//info->fdd = open("./poundai", O_CREAT | O_RDWR | O_TRUNC, 0666);
 	line = NULL;
 	IP = 0;
@@ -54,12 +56,21 @@ int		main(void)
 		filler_read(info->fds, info);
 		i = play_filler(info->fds, info);
 		if (i == 2 && F_SCORE == 0)
+		{
+			free_board(info, IBOARD, SZBOARDY);
+			free_tab(info, IPIECE, SZPIECEY);
 			break ;
+		}
 		if (F_SCORE != 0)
 			ft_printf("%d %d\n", (SY - MY), (SX - MX));
-		free_tab(IBOARD, SZBOARDY + 1);
-		free_tab(IPIECE, SZPIECEY);
+		//dprintf(info->fds, "START FREEEE+++++\n");
+		free_board(info, IBOARD, SZBOARDY);
+		free_tab(info, IPIECE, SZPIECEY);
+		//dprintf(info->fds, "END FREEEE+++++++\n");
+		IBOARD = NULL;
+		IPIECE = NULL;
 	}
 	ft_bzero(info, sizeof(t_info));
+	free(info);
 	return (0);
 }
