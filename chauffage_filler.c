@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/23 18:01:29 by susivagn          #+#    #+#             */
-/*   Updated: 2018/01/24 12:45:27 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/01/25 15:56:38 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,22 +19,22 @@ int		chauffage_border(t_info *info)
 	char	c;
 
 	y = 0;
-	if (info->plateau == 1)
-		c = '[';
-	else
-		c = '<';
-	while ((IBOARD) && IBOARD[y])
+	c = '<';
+	if (info->plateau != 1)
 	{
-		x = 0;
-		while ((IBOARD) && IBOARD[y] && IBOARD[y][x])
+		while ((IBOARD) && IBOARD[y])
 		{
-			if ((y == 1 || y == (SZBOARDY - 2)) && (IBOARD[y][x] == '.'))
-				IBOARD[y][x] = c;
-			else if ((x == 1 || x == (SZBOARDX - 2)) && (IBOARD[y][x] == '.'))
-				IBOARD[y][x] = c;
-			x++;
+			x = 0;
+			while ((IBOARD) && IBOARD[y] && IBOARD[y][x])
+			{
+				if ((y == 1 || y == (SZBOARDY - 2)) && (IBOARD[y][x] == '.'))
+					IBOARD[y][x] = c;
+				else if ((x == 1 || x == (SZBOARDX - 2)) && (IBOARD[y][x] == '.'))
+					IBOARD[y][x] = c;
+				x++;
+			}
+			y++;
 		}
-		y++;
 	}
 	return (0);
 }

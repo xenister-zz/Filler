@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 16:31:06 by susivagn          #+#    #+#             */
-/*   Updated: 2018/01/24 12:57:34 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/01/25 15:09:33 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,8 +70,8 @@ int		play_filler(int fdr, t_info *info)
 
 	i = 0;
 	init_struct(info);
-	chauffage_enemy(0, 0, info);
 	chauffage_border(info);
+	chauffage_enemy(0, 0, info);
 	while ((IBOARD) && IBOARD[IY])
 	{
 		IX = 0;
