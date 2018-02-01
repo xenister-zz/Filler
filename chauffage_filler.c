@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/23 18:01:29 by susivagn          #+#    #+#             */
-/*   Updated: 2018/02/01 01:32:21 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/02/01 03:45:28 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,28 @@ int		chauffage_border(t_info *info)
 			y++;
 		}
 	}
+	if (info->plateau == 1 && info->player == 'O')
+		chauffage_map00(info, 0);
 	return (0);
+}
+
+int		chauffage_map00(t_info *info, int x)
+{
+	char	c;
+
+	c = '[';
+	dprintf(info->fds, "START STRAT PLATEAU %d\n", info->plateau);
+	while (IBOARD[8][x])
+		{
+			if (IBOARD[8][x] && IBOARD[8][x] == '.' && x > 2)
+				IBOARD[8][x] = c;
+			if (IBOARD[7][x] && IBOARD[7][x] == '.' && x > 6)
+				IBOARD[7][x] = c;
+			x++;
+		}
+	
+	dprintf(info->fds, "END STRAT PLATEAU \n");
+	return(0);
 }
 
 int		chauffage_enemy(int x, int y, t_info *info)

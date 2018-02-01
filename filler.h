@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 15:04:04 by susivagn          #+#    #+#             */
-/*   Updated: 2018/01/25 20:48:28 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/02/01 03:28:16 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,5 +76,6 @@ void			ft_set_score(t_info *info);
 void			init_struct(t_info *info);
 void	        free_tab(t_info *info, char **tab, int size);
 void	        free_board(t_info *info, char **tab, int size);
+int		        chauffage_map00(t_info *info, int x);
 
 #endif

@@ -1,1346 +1,1278 @@
-RET == *1*
-*$$$ exec p1 : [./susivagn.filler]*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 1:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 1:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 2:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 1:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 1:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 2:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 2:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 2:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 1:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 2:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 1:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 2:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 2:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 2:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 1:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 1:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 2:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 1:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 1:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 2:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 2:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 1:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 1:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 1:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 1:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 1:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 2:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 2:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 1:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 1:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 2:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 2:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 2:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 1:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 1:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 1:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 1:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 2:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 2:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 2:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 2:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 1:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 2:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 2:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 1:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 2:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 1:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 1:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 2:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 2:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 2:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 2:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 2:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 2:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 1:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 22:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 1:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 2:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 2:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 2:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 1:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 2:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 2:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 2:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 14 16:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 2:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 2:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 1:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 17 2:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 3:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 1 6:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 2 4:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 3 7:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 2:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 4 5:*
-RET == *1*
-*Plateau 24 40:*
-RET == *1*
-*Piece 6 1:*
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|.................|
+|.................|
+|.................|
+|.................|
+|.................|
+|.................|
+|.................|
+|.......[[[[[[[[[[|
+|..O[[[[[[[[[[[[[[|
+|.................|
+|.................|
+|.................|
+|.............@X..|
+|.................|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|.................|
+|.................|
+|.................|
+|.................|
+|.................|
+|.................|
+|.................|
+|.......[[[[[[[[[[|
+|..OOO[[[[[[[[[[[[|
+|.................|
+|.................|
+|.................|
+|.............@XX@|
+|.................|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|.................|
+|.................|
+|.................|
+|.................|
+|.................|
+|.................|
+|.................|
+|.....O.[[[[[[[[[[|
+|..OOOO[[[[[[[[[[[|
+|.................|
+|.................|
+|...........@X@@..|
+|...........@XXXX@|
+|.................|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|.................|
+|.................|
+|.................|
+|.................|
+|.................|
+|.................|
+|.................|
+|.....O.[[[[[[[[[[|
+|..OOOOO[[[[[[[[[[|
+|.....O...........|
+|...........@X....|
+|...........@X@@..|
+|...........@XXXX@|
+|.................|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|.................|
+|.................|
+|.................|
+|.................|
+|.................|
+|.................|
+|.................|
+|.....O.[[[[[[[[[[|
+|..OOOOOO[[[[[[[[[|
+|.....O.....@XX@..|
+|...........@XX@..|
+|...........@X@@..|
+|...........@XXXX@|
+|.................|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|.................|
+|.................|
+|.................|
+|.................|
+|.................|
+|.................|
+|.................|
+|.....O.[[[[[[[[[[|
+|..OOOOOOO[[[[X[[[|
+|.....O.....@XX@..|
+|...........@XX@..|
+|...........@X@@..|
+|...........@XXXX@|
+|.................|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|.................|
+|.................|
+|.................|
+|.................|
+|.................|
+|.................|
+|............@@@..|
+|.....O.O[[[[XXX[[|
+|..OOOOOOO[[[[X[[[|
+|.....O.....@XX@..|
+|...........@XX@..|
+|...........@X@@..|
+|...........@XXXX@|
+|.................|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|.................|
+|.................|
+|.................|
+|.................|
+|.................|
+|.................|
+|............@@@@@|
+|.....O.OO[[[XXXXX|
+|..OOOOOOO[[[[X[[[|
+|.....O.....@XX@..|
+|...........@XX@..|
+|...........@X@@..|
+|...........@XXXX@|
+|.................|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|.................|
+|.................|
+|.................|
+|.................|
+|.................|
+|.................|
+|........OO.@@@@@@|
+|.....O.OOO[XXXXXX|
+|..OOOOOOO[[[[X[[[|
+|.....O.....@XX@..|
+|...........@XX@..|
+|...........@X@@..|
+|...........@XXXX@|
+|.................|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|.................|
+|.................|
+|.................|
+|.................|
+|.................|
+|.................|
+|........OO.@@@@@@|
+|.....O.OOO[XXXXXX|
+|..OOOOOOOO[[[XXX[|
+|.....O.....@XX@@.|
+|...........@XX@..|
+|...........@X@@..|
+|...........@XXXX@|
+|.................|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|.................|
+|.................|
+|.................|
+|.................|
+|.................|
+|........O........|
+|........OO@@@@@@@|
+|.....O.OOOXXXXXXX|
+|..OOOOOOOO[[[XXX[|
+|.....O.....@XX@@.|
+|...........@XX@..|
+|...........@X@@..|
+|...........@XXXX@|
+|.................|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|.................|
+|.................|
+|.................|
+|.................|
+|.................|
+|........O........|
+|........OO@@@@@@@|
+|.....O.OOOXXXXXXX|
+|..OOOOOOOOOO[XXX[|
+|.....O.....@XXXX@|
+|...........@XX@..|
+|...........@X@@..|
+|...........@XXXX@|
+|.............@...|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|.................|
+|.................|
+|.................|
+|.................|
+|.................|
+|........O........|
+|........OO@@@@@@@|
+|.....O.OOOXXXXXXX|
+|..OOOOOOOOOOOXXXX|
+|.....O.....@XXXX@|
+|...........@XX@@.|
+|...........@X@@..|
+|...........@XXXX@|
+|.............@...|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|.................|
+|.................|
+|.................|
+|.................|
+|.................|
+|........O........|
+|........OOO@@@@@@|
+|.....O.OOOXXXXXXX|
+|..OOOOOOOOOOOXXXX|
+|.....O...@XXXXXX@|
+|..........@XXX@@.|
+|...........@X@@..|
+|...........@XXXX@|
+|.............@...|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|.................|
+|.................|
+|.................|
+|.................|
+|.................|
+|........O........|
+|........OOO@@@@@X|
+|.....O.OOOXXXXXXX|
+|..OOOOOOOOOOOXXXX|
+|.....O...OXXXXXX@|
+|..........@XXX@@.|
+|...........@X@@..|
+|...........@XXXX@|
+|.............@...|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|.................|
+|.................|
+|.................|
+|.................|
+|.......OOO......@|
+|........O.....@XX|
+|........OOO@@@@XX|
+|.....O.OOOXXXXXXX|
+|..OOOOOOOOOOOXXXX|
+|.....O...OXXXXXX@|
+|..........@XXX@@.|
+|...........@X@@..|
+|...........@XXXX@|
+|.............@...|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|.................|
+|.................|
+|.................|
+|.......O.........|
+|.......OOO.....@@|
+|........O....@XXX|
+|........OOO@@@@XX|
+|.....O.OOOXXXXXXX|
+|..OOOOOOOOOOOXXXX|
+|.....O...OXXXXXX@|
+|..........@XXX@@.|
+|...........@X@@..|
+|...........@XXXX@|
+|.............@...|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|.................|
+|.................|
+|.......O.........|
+|.......O.........|
+|.......OOO....@X@|
+|........O....@XXX|
+|........OOO@@@@XX|
+|.....O.OOOXXXXXXX|
+|..OOOOOOOOOOOXXXX|
+|.....O...OXXXXXX@|
+|..........@XXX@@.|
+|...........@X@@..|
+|...........@XXXX@|
+|.............@...|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|.................|
+|.................|
+|.......O........@|
+|.......O......@XX|
+|.......OOO....@XX|
+|........O.OO.@XXX|
+|........OOOO@@@XX|
+|.....O.OOOXXXXXXX|
+|..OOOOOOOOOOOXXXX|
+|.....O...OXXXXXX@|
+|..........@XXX@@.|
+|...........@X@@..|
+|...........@XXXX@|
+|.............@...|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|.................|
+|......OO.........|
+|......OO.......@X|
+|.......O......@XX|
+|.......OOO....@XX|
+|........O.OO.@XXX|
+|........OOOO@@@XX|
+|.....O.OOOXXXXXXX|
+|..OOOOOOOOOOOXXXX|
+|.....O...OXXXXXX@|
+|..........@XXX@@.|
+|...........@X@@..|
+|...........@XXXX@|
+|.............@...|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|......O..........|
+|......OO.......@@|
+|......OO.....@XXX|
+|.......O......@XX|
+|.......OOO....@XX|
+|........O.OO.@XXX|
+|........OOOO@@@XX|
+|.....O.OOOXXXXXXX|
+|..OOOOOOOOOOOXXXX|
+|.....O...OXXXXXX@|
+|..........@XXX@@.|
+|...........@X@@..|
+|...........@XXXX@|
+|.............@...|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|......O..........|
+|......OO......@@@|
+|......OO....@XXXX|
+|.......O......@XX|
+|.......OOO....@XX|
+|........O.OO.@XXX|
+|........OOOOO@@XX|
+|.....O.OOOXXXXXXX|
+|..OOOOOOOOOOOXXXX|
+|.....O...OXXXXXX@|
+|..........@XXX@@.|
+|...........@X@@..|
+|...........@XXXX@|
+|.............@...|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|......O..........|
+|......OO.....@@@@|
+|......OO...@XXXXX|
+|.......O......@XX|
+|.......OOO....@XX|
+|........O.OOOOXXX|
+|........OOOOOO@XX|
+|.....O.OOOXXXXXXX|
+|..OOOOOOOOOOOXXXX|
+|.....O...OXXXXXX@|
+|..........@XXX@@.|
+|...........@X@@..|
+|...........@XXXX@|
+|.............@...|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|......O..........|
+|......OO....@@@@@|
+|......OO..@XXXXXX|
+|.......O......@XX|
+|.......OOO....@XX|
+|........O.OOOOXXX|
+|........OOOOOOOXX|
+|.....O.OOOXXXXXXX|
+|..OOOOOOOOOOOXXXX|
+|.....O...OXXXXXX@|
+|..........@XXX@@.|
+|...........@X@@..|
+|...........@XXXX@|
+|.............@...|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|......OO.........|
+|......OO...@@@@@@|
+|......OO.@XXXXXXX|
+|.......O......@XX|
+|.......OOO....@XX|
+|........O.OOOOXXX|
+|........OOOOOOOXX|
+|.....O.OOOXXXXXXX|
+|..OOOOOOOOOOOXXXX|
+|.....O...OXXXXXX@|
+|..........@XXX@@.|
+|...........@X@@..|
+|...........@XXXX@|
+|.............@...|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|......OO.........|
+|......OO...@@@X@@|
+|......OO.@XXXXXXX|
+|......OO.....@@XX|
+|.......OOO....@XX|
+|........O.OOOOXXX|
+|........OOOOOOOXX|
+|.....O.OOOXXXXXXX|
+|..OOOOOOOOOOOXXXX|
+|.....O...OXXXXXX@|
+|..........@XXX@@.|
+|...........@X@@..|
+|...........@XXXX@|
+|.............@...|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|.....OOO.........|
+|......OO...@@@XX@|
+|......OO.@XXXXXXX|
+|......OO.....@@XX|
+|.......OOO....@XX|
+|........O.OOOOXXX|
+|........OOOOOOOXX|
+|.....O.OOOXXXXXXX|
+|..OOOOOOOOOOOXXXX|
+|.....O...OXXXXXX@|
+|..........@XXX@@.|
+|...........@X@@..|
+|...........@XXXX@|
+|.............@...|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|....OOOO......@X.|
+|.....OOO...@@@XX@|
+|......OO.@XXXXXXX|
+|......OO.....@@XX|
+|.......OOO....@XX|
+|........O.OOOOXXX|
+|........OOOOOOOXX|
+|.....O.OOOXXXXXXX|
+|..OOOOOOOOOOOXXXX|
+|.....O...OXXXXXX@|
+|..........@XXX@@.|
+|...........@X@@..|
+|...........@XXXX@|
+|.............@...|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|...OOOOO.....@XX@|
+|.....OOO...@@@XX@|
+|......OO.@XXXXXXX|
+|......OO.....@@XX|
+|.......OOO....@XX|
+|........O.OOOOXXX|
+|........OOOOOOOXX|
+|.....O.OOOXXXXXXX|
+|..OOOOOOOOOOOXXXX|
+|.....O...OXXXXXX@|
+|..........@XXX@@.|
+|...........@X@@..|
+|...........@XXXX@|
+|.............@...|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|...OOOOO.....@XXX|
+|...O.OOO...@@@XX@|
+|......OO.@XXXXXXX|
+|......OO.....@@XX|
+|.......OOO....@XX|
+|........O.OOOOXXX|
+|........OOOOOOOXX|
+|.....O.OOOXXXXXXX|
+|..OOOOOOOOOOOXXXX|
+|.....O...OXXXXXX@|
+|..........@XXX@@.|
+|...........@X@@..|
+|...........@XXXX@|
+|.............@...|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|...OOOOO....@XXXX|
+|...O.OOOOO@@@@XX@|
+|......OOOOXXXXXXX|
+|......OO.....@@XX|
+|.......OOO....@XX|
+|........O.OOOOXXX|
+|........OOOOOOOXX|
+|.....O.OOOXXXXXXX|
+|..OOOOOOOOOOOXXXX|
+|.....O...OXXXXXX@|
+|..........@XXX@@.|
+|...........@X@@..|
+|...........@XXXX@|
+|.............@...|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|...OOOOO..@XXXXXX|
+|...O.OOOOOOO@@XX@|
+|......OOOOXXXXXXX|
+|......OO..@@@@@XX|
+|.......OOO....@XX|
+|........O.OOOOXXX|
+|........OOOOOOOXX|
+|.....O.OOOXXXXXXX|
+|..OOOOOOOOOOOXXXX|
+|.....O...OXXXXXX@|
+|..........@XXX@@.|
+|...........@X@@..|
+|...........@XXXX@|
+|.............@...|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|...OOOOO..@XXXXXX|
+|...O.OOOOOOO@@XX@|
+|......OOOOXXXXXXX|
+|......OO.OO@@@@XX|
+|.......OOOO...@XX|
+|........O.OOOOXXX|
+|........OOOOOOOXX|
+|.....O.OOOXXXXXXX|
+|..OOOOOOOOOOOXXXX|
+|.....O...OXXXXXXX|
+|..........@XXX@XX|
+|...........@X@@@@|
+|...........@XXXX@|
+|.............@...|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|...OOOOO..OXXXXXX|
+|...O.OOOOOOO@@XXX|
+|......OOOOXXXXXXX|
+|......OO.OO@@@@XX|
+|.......OOOO...@XX|
+|........O.OOOOXXX|
+|........OOOOOOOXX|
+|.....O.OOOXXXXXXX|
+|..OOOOOOOOOOOXXXX|
+|.....O...OXXXXXXX|
+|..........@XXX@XX|
+|...........@X@@@@|
+|...........@XXXX@|
+|.............@...|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|...OOOOO..OXXXXXX|
+|...O.OOOOOOO@XXXX|
+|......OOOOXXXXXXX|
+|......OO.OO@O@@XX|
+|.......OOOOOO.@XX|
+|........O.OOOOXXX|
+|........OOOOOOOXX|
+|.....O.OOOXXXXXXX|
+|..OOOOOOOOOOOXXXX|
+|.....O...OXXXXXXX|
+|..........@XXX@XX|
+|...........@X@@@@|
+|...........@XXXX@|
+|.............@...|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|...OOOOO..OXXXXXX|
+|...O.OOOOOOOXXXXX|
+|......OOOOXXXXXXX|
+|......OO.OOOO@@XX|
+|.......OOOOOO.@XX|
+|........O.OOOOXXX|
+|........OOOOOOOXX|
+|.....O.OOOXXXXXXX|
+|..OOOOOOOOOOOXXXX|
+|.....O...OXXXXXXX|
+|..........@XXX@XX|
+|...........@X@@@@|
+|...........@XXXX@|
+|.............@...|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|...OOOOO..OXXXXXX|
+|...OOOOOOOOOXXXXX|
+|......OOOOXXXXXXX|
+|......OO.OOOOXXXX|
+|.......OOOOOO@@XX|
+|........O.OOOOXXX|
+|........OOOOOOOXX|
+|.....O.OOOXXXXXXX|
+|..OOOOOOOOOOOXXXX|
+|.....O...OXXXXXXX|
+|..........@XXX@XX|
+|...........@X@@@@|
+|...........@XXXX@|
+|.............@...|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|...OOOOO..OXXXXXX|
+|...OOOOOOOOOXXXXX|
+|......OOOOXXXXXXX|
+|......OO.OOOOXXXX|
+|.......OOOOOO@XXX|
+|........O.OOOOXXX|
+|........OOOOOOOXX|
+|.....O.OOOXXXXXXX|
+|..OOOOOOOOOOOXXXX|
+|.....O...OXXXXXXX|
+|.........OOXXX@XX|
+|...........@X@@@@|
+|...........@XXXX@|
+|.............@...|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|..OOOOOO..OXXXXXX|
+|..OOOOOOOOOOXXXXX|
+|......OOOOXXXXXXX|
+|......OO.OOOOXXXX|
+|.......OOOOOO@XXX|
+|........O.OOOOXXX|
+|........OOOOOOOXX|
+|.....O.OOOXXXXXXX|
+|..OOOOOOOOOOOXXXX|
+|.....O...OXXXXXXX|
+|.........OOXXX@XX|
+|...........@XXX@@|
+|...........@XXXX@|
+|.............@@..|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|..OOOOOO..OXXXXXX|
+|..OOOOOOOOOOXXXXX|
+|......OOOOXXXXXXX|
+|......OO.OOOOXXXX|
+|.......OOOOOOOXXX|
+|........O.OOOOXXX|
+|........OOOOOOOXX|
+|.....O.OOOXXXXXXX|
+|..OOOOOOOOOOOXXXX|
+|.....O...OXXXXXXX|
+|.........OOXXX@XX|
+|........@XXXXXX@@|
+|..........@@XXXX@|
+|............@@@..|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|.OOOOOOO..OXXXXXX|
+|..OOOOOOOOOOXXXXX|
+|......OOOOXXXXXXX|
+|......OO.OOOOXXXX|
+|.......OOOOOOOXXX|
+|........O.OOOOXXX|
+|........OOOOOOOXX|
+|.....O.OOOXXXXXXX|
+|..OOOOOOOOOOOXXXX|
+|.....O...OXXXXXXX|
+|.........OOXXXXXX|
+|........@XXXXXX@@|
+|..........@@XXXX@|
+|............@@@..|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|.OOOOOOOOOOXXXXXX|
+|..OOOOOOOOOOXXXXX|
+|......OOOOXXXXXXX|
+|......OO.OOOOXXXX|
+|.......OOOOOOOXXX|
+|........O.OOOOXXX|
+|........OOOOOOOXX|
+|.....O.OOOXXXXXXX|
+|..OOOOOOOOOOOXXXX|
+|.....O...OXXXXXXX|
+|.........OOXXXXXX|
+|........@XXXXXXX@|
+|..........@@XXXX@|
+|............@@@..|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|.OOOOOOOOOOXXXXXX|
+|OOOOOOOOOOOOXXXXX|
+|......OOOOXXXXXXX|
+|......OO.OOOOXXXX|
+|.......OOOOOOOXXX|
+|........O.OOOOXXX|
+|........OOOOOOOXX|
+|.....O.OOOXXXXXXX|
+|..OOOOOOOOOOOXXXX|
+|.....O...OXXXXXXX|
+|.........OOXXXXXX|
+|........@XXXXXXXX|
+|..........@@XXXX@|
+|............@@@@.|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|.OOOOOOOOOOXXXXXX|
+|OOOOOOOOOOOOXXXXX|
+|OO....OOOOXXXXXXX|
+|......OO.OOOOXXXX|
+|.......OOOOOOOXXX|
+|........O.OOOOXXX|
+|........OOOOOOOXX|
+|.....O.OOOXXXXXXX|
+|..OOOOOOOOOOOXXXX|
+|.....O...OXXXXXXX|
+|.........OOXXXXXX|
+|.......@XXXXXXXXX|
+|.........@@@XXXX@|
+|............@@@@.|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|OOOOOOOOOOOXXXXXX|
+|OOOOOOOOOOOOXXXXX|
+|OO....OOOOXXXXXXX|
+|......OO.OOOOXXXX|
+|.......OOOOOOOXXX|
+|........O.OOOOXXX|
+|........OOOOOOOXX|
+|.....O.OOOXXXXXXX|
+|..OOOOOOOOOOOXXXX|
+|.....O...OXXXXXXX|
+|........@OOXXXXXX|
+|......@XXXXXXXXXX|
+|.........@@@XXXX@|
+|............@@@@.|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|OOOOOOOOOOOXXXXXX|
+|OOOOOOOOOOOOXXXXX|
+|OOO...OOOOXXXXXXX|
+|......OO.OOOOXXXX|
+|.......OOOOOOOXXX|
+|........O.OOOOXXX|
+|........OOOOOOOXX|
+|.....O.OOOXXXXXXX|
+|..OOOOOOOOOOOXXXX|
+|.....O...OXXXXXXX|
+|.......@XOOXXXXXX|
+|......@XXXXXXXXXX|
+|........@@@@XXXX@|
+|............@@@@.|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|OOOOOOOOOOOXXXXXX|
+|OOOOOOOOOOOOXXXXX|
+|OOOOO.OOOOXXXXXXX|
+|...O..OO.OOOOXXXX|
+|.......OOOOOOOXXX|
+|........O.OOOOXXX|
+|........OOOOOOOXX|
+|.....O.OOOXXXXXXX|
+|..OOOOOOOOOOOXXXX|
+|.....O.@@OXXXXXXX|
+|.....@XXXOOXXXXXX|
+|......@XXXXXXXXXX|
+|........@@@@XXXX@|
+|............@@@@.|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|OOOOOOOOOOOXXXXXX|
+|OOOOOOOOOOOOXXXXX|
+|OOOOO.OOOOXXXXXXX|
+|...O..OO.OOOOXXXX|
+|.......OOOOOOOXXX|
+|........O.OOOOXXX|
+|........OOOOOOOXX|
+|.....O.OOOXXXXXXX|
+|..OOOOOOOOOOOXXXX|
+|.....O@O@OXXXXXXX|
+|....@XXXXOOXXXXXX|
+|....@XXXXXXXXXXXX|
+|......@@@@@@XXXX@|
+|............@@@@.|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|OOOOOOOOOOOXXXXXX|
+|OOOOOOOOOOOOXXXXX|
+|OOOOO.OOOOXXXXXXX|
+|...O..OO.OOOOXXXX|
+|.......OOOOOOOXXX|
+|........O.OOOOXXX|
+|........OOOOOOOXX|
+|.....O.OOOXXXXXXX|
+|..OOOOOOOOOOOXXXX|
+|....@OOO@OXXXXXXX|
+|..@XXXXXXOOXXXXXX|
+|....@XXXXXXXXXXXX|
+|......@@@@@@XXXX@|
+|............@@@@.|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|OOOOOOOOOOOXXXXXX|
+|OOOOOOOOOOOOXXXXX|
+|OOOOO.OOOOXXXXXXX|
+|...O..OO.OOOOXXXX|
+|.......OOOOOOOXXX|
+|........O.OOOOXXX|
+|........OOOOOOOXX|
+|.....O.OOOXXXXXXX|
+|..OOOOOOOOOOOXXXX|
+|.@XXOOOO@OXXXXXXX|
+|..@XXXXXXOOXXXXXX|
+|....@XXXXXXXXXXXX|
+|.....@@@@@@@XXXX@|
+|............@@@@.|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|OOOOOOOOOOOXXXXXX|
+|OOOOOOOOOOOOXXXXX|
+|OOOOO.OOOOXXXXXXX|
+|...O..OO.OOOOXXXX|
+|.......OOOOOOOXXX|
+|........O.OOOOXXX|
+|........OOOOOOOXX|
+|.....O.OOOXXXXXXX|
+|..OOOOOOOOOOOXXXX|
+|@XXXOOOOOOXXXXXXX|
+|..@XXXXXXOOXXXXXX|
+|...@@XXXXXXXXXXXX|
+|.....@@@@@@@XXXX@|
+|............@@@@.|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|OOOOOOOOOOOXXXXXX|
+|OOOOOOOOOOOOXXXXX|
+|OOOOOOOOOOXXXXXXX|
+|...O..OO.OOOOXXXX|
+|.......OOOOOOOXXX|
+|........O.OOOOXXX|
+|........OOOOOOOXX|
+|.....O.OOOXXXXXXX|
+|..OOOOOOOOOOOXXXX|
+|@XXXOOOOOOXXXXXXX|
+|@XXXXXXXXOOXXXXXX|
+|..@@@XXXXXXXXXXXX|
+|.....@@@@@@@XXXX@|
+|............@@@@.|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|OOOOOOOOOOOXXXXXX|
+|OOOOOOOOOOOOXXXXX|
+|OOOOOOOOOOXXXXXXX|
+|O..O..OO.OOOOXXXX|
+|.......OOOOOOOXXX|
+|........O.OOOOXXX|
+|........OOOOOOOXX|
+|.....O.OOOXXXXXXX|
+|..OOOOOOOOOOOXXXX|
+|@XXXOOOOOOXXXXXXX|
+|@XXXXXXXXOOXXXXXX|
+|..@@XXXXXXXXXXXXX|
+|....@@@@@@@@XXXX@|
+|............@@@@.|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|OOOOOOOOOOOXXXXXX|
+|OOOOOOOOOOOOXXXXX|
+|OOOOOOOOOOXXXXXXX|
+|OOOO..OO.OOOOXXXX|
+|.......OOOOOOOXXX|
+|........O.OOOOXXX|
+|........OOOOOOOXX|
+|.....O.OOOXXXXXXX|
+|@XOOOOOOOOOOOXXXX|
+|@XXXOOOOOOXXXXXXX|
+|@XXXXXXXXOOXXXXXX|
+|..@@XXXXXXXXXXXXX|
+|....@@@@@@@@XXXX@|
+|............@@@@.|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|OOOOOOOOOOOXXXXXX|
+|OOOOOOOOOOOOXXXXX|
+|OOOOOOOOOOXXXXXXX|
+|OOOOO.OO.OOOOXXXX|
+|.......OOOOOOOXXX|
+|........O.OOOOXXX|
+|........OOOOOOOXX|
+|.....O.OOOXXXXXXX|
+|@XOOOOOOOOOOOXXXX|
+|@XXXOOOOOOXXXXXXX|
+|@XXXXXXXXOOXXXXXX|
+|.@XXXXXXXXXXXXXXX|
+|...@@@@@@@@@XXXX@|
+|............@@@@.|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|OOOOOOOOOOOXXXXXX|
+|OOOOOOOOOOOOXXXXX|
+|OOOOOOOOOOXXXXXXX|
+|OOOOOOOO.OOOOXXXX|
+|.......OOOOOOOXXX|
+|........O.OOOOXXX|
+|@.......OOOOOOOXX|
+|XX@..O.OOOXXXXXXX|
+|@XOOOOOOOOOOOXXXX|
+|@XXXOOOOOOXXXXXXX|
+|@XXXXXXXXOOXXXXXX|
+|.@XXXXXXXXXXXXXXX|
+|...@@@@@@@@@XXXX@|
+|............@@@@.|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|OOOOOOOOOOOXXXXXX|
+|OOOOOOOOOOOOXXXXX|
+|OOOOOOOOOOXXXXXXX|
+|OOOOOOOO.OOOOXXXX|
+|OO.....OOOOOOOXXX|
+|........O.OOOOXXX|
+|@@......OOOOOOOXX|
+|XXX@.O.OOOXXXXXXX|
+|@XOOOOOOOOOOOXXXX|
+|@XXXOOOOOOXXXXXXX|
+|@XXXXXXXXOOXXXXXX|
+|.@XXXXXXXXXXXXXXX|
+|...@@@@@@@@@XXXX@|
+|............@@@@.|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|OOOOOOOOOOOXXXXXX|
+|OOOOOOOOOOOOXXXXX|
+|OOOOOOOOOOXXXXXXX|
+|OOOOOOOOOOOOOXXXX|
+|OO.....OOOOOOOXXX|
+|........O.OOOOXXX|
+|@@@.....OOOOOOOXX|
+|XXXX@O.OOOXXXXXXX|
+|@XOOOOOOOOOOOXXXX|
+|@XXXOOOOOOXXXXXXX|
+|@XXXXXXXXOOXXXXXX|
+|.@XXXXXXXXXXXXXXX|
+|...@@@@@@@@@XXXX@|
+|............@@@@.|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|OOOOOOOOOOOXXXXXX|
+|OOOOOOOOOOOOXXXXX|
+|OOOOOOOOOOXXXXXXX|
+|OOOOOOOOOOOOOXXXX|
+|OO.....OOOOOOOXXX|
+|........O.OOOOXXX|
+|@@@@O...OOOOOOOXX|
+|XXXXOO.OOOXXXXXXX|
+|@XOOOOOOOOOOOXXXX|
+|@XXXOOOOOOXXXXXXX|
+|@XXXXXXXXOOXXXXXX|
+|@XXXXXXXXXXXXXXXX|
+|..@@@@@@@@@@XXXX@|
+|............@@@@.|
+|.................|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|OOOOOOOOOOOXXXXXX|
+|OOOOOOOOOOOOXXXXX|
+|OOOOOOOOOOXXXXXXX|
+|OOOOOOOOOOOOOXXXX|
+|OO.....OOOOOOOXXX|
+|...O....O.OOOOXXX|
+|@@@OO...OOOOOOOXX|
+|XXXXOO.OOOXXXXXXX|
+|@XOOOOOOOOOOOXXXX|
+|@XXXOOOOOOXXXXXXX|
+|@XXXXXXXXOOXXXXXX|
+|@XXXXXXXXXXXXXXXX|
+|..@@@@@@@@@@XXXXX|
+|............@@@XX|
+|...............@@|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|OOOOOOOOOOOXXXXXX|
+|OOOOOOOOOOOOXXXXX|
+|OOOOOOOOOOXXXXXXX|
+|OOOOOOOOOOOOOXXXX|
+|OOO....OOOOOOOXXX|
+|...O....O.OOOOXXX|
+|@@XOO...OOOOOOOXX|
+|XXXXOO.OOOXXXXXXX|
+|@XOOOOOOOOOOOXXXX|
+|@XXXOOOOOOXXXXXXX|
+|@XXXXXXXXOOXXXXXX|
+|@XXXXXXXXXXXXXXXX|
+|..@@@@@@@@@@XXXXX|
+|............@@@XX|
+|...............@@|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|OOOOOOOOOOOXXXXXX|
+|OOOOOOOOOOOOXXXXX|
+|OOOOOOOOOOXXXXXXX|
+|OOOOOOOOOOOOOXXXX|
+|OOOO...OOOOOOOXXX|
+|..@O....O.OOOOXXX|
+|@XXOO...OOOOOOOXX|
+|XXXXOO.OOOXXXXXXX|
+|@XOOOOOOOOOOOXXXX|
+|@XXXOOOOOOXXXXXXX|
+|@XXXXXXXXOOXXXXXX|
+|@XXXXXXXXXXXXXXXX|
+|..@@@@@@@@@@XXXXX|
+|............@@@XX|
+|...............@@|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|OOOOOOOOOOOXXXXXX|
+|OOOOOOOOOOOOXXXXX|
+|OOOOOOOOOOXXXXXXX|
+|OOOOOOOOOOOOOXXXX|
+|OOOO...OOOOOOOXXX|
+|@XOO....O.OOOOXXX|
+|@XXOO...OOOOOOOXX|
+|XXXXOO.OOOXXXXXXX|
+|@XOOOOOOOOOOOXXXX|
+|@XXXOOOOOOXXXXXXX|
+|@XXXXXXXXOOXXXXXX|
+|@XXXXXXXXXXXXXXXX|
+|..@@@@@@@@@@XXXXX|
+|............@@@XX|
+|...............@@|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|OOOOOOOOOOOXXXXXX|
+|OOOOOOOOOOOOXXXXX|
+|OOOOOOOOOOXXXXXXX|
+|OOOOOOOOOOOOOXXXX|
+|OOOOO..OOOOOOOXXX|
+|XXOO....O.OOOOXXX|
+|@XXOO...OOOOOOOXX|
+|XXXXOO.OOOXXXXXXX|
+|@XOOOOOOOOOOOXXXX|
+|@XXXOOOOOOXXXXXXX|
+|@XXXXXXXXOOXXXXXX|
+|@XXXXXXXXXXXXXXXX|
+|..@@@@@@@@@@XXXXX|
+|............@@@XX|
+|...............@@|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|OOOOOOOOOOOXXXXXX|
+|OOOOOOOOOOOOXXXXX|
+|OOOOOOOOOOXXXXXXX|
+|OOOOOOOOOOOOOXXXX|
+|OOOOOO.OOOOOOOXXX|
+|XXOO....O.OOOOXXX|
+|@XXOO...OOOOOOOXX|
+|XXXXOO.OOOXXXXXXX|
+|@XOOOOOOOOOOOXXXX|
+|@XXXOOOOOOXXXXXXX|
+|@XXXXXXXXOOXXXXXX|
+|@XXXXXXXXXXXXXXXX|
+|..@@@@@@@@XXXXXXX|
+|..........@@@@@XX|
+|...............@@|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|OOOOOOOOOOOXXXXXX|
+|OOOOOOOOOOOOXXXXX|
+|OOOOOOOOOOXXXXXXX|
+|OOOOOOOOOOOOOXXXX|
+|OOOOOO.OOOOOOOXXX|
+|XXOOOO..O.OOOOXXX|
+|XXXOO...OOOOOOOXX|
+|XXXXOO.OOOXXXXXXX|
+|@XOOOOOOOOOOOXXXX|
+|@XXXOOOOOOXXXXXXX|
+|@XXXXXXXXOOXXXXXX|
+|@XXXXXXXXXXXXXXXX|
+|..@@@@@@@@XXXXXXX|
+|..........@@@@@XX|
+|...............@@|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|OOOOOOOOOOOXXXXXX|
+|OOOOOOOOOOOOXXXXX|
+|OOOOOOOOOOXXXXXXX|
+|OOOOOOOOOOOOOXXXX|
+|OOOOOO.OOOOOOOXXX|
+|XXOOOOOOO.OOOOXXX|
+|XXXOO...OOOOOOOXX|
+|XXXXOO.OOOXXXXXXX|
+|@XOOOOOOOOOOOXXXX|
+|@XXXOOOOOOXXXXXXX|
+|@XXXXXXXXOOXXXXXX|
+|@XXXXXXXXXXXXXXXX|
+|..@@@@@@XXXXXXXXX|
+|........@XX@@@@XX|
+|.........@@....@@|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|OOOOOOOOOOOXXXXXX|
+|OOOOOOOOOOOOXXXXX|
+|OOOOOOOOOOXXXXXXX|
+|OOOOOOOOOOOOOXXXX|
+|OOOOOO.OOOOOOOXXX|
+|XXOOOOOOO.OOOOXXX|
+|XXXOO.OOOOOOOOOXX|
+|XXXXOOOOOOXXXXXXX|
+|@XOOOOOOOOOOOXXXX|
+|@XXXOOOOOOXXXXXXX|
+|@XXXXXXXXOOXXXXXX|
+|@XXXXXXXXXXXXXXXX|
+|..@@@@XXXXXXXXXXX|
+|......@@@XX@@@@XX|
+|.........@@....@@|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|OOOOOOOOOOOXXXXXX|
+|OOOOOOOOOOOOXXXXX|
+|OOOOOOOOOOXXXXXXX|
+|OOOOOOOOOOOOOXXXX|
+|OOOOOOOOOOOOOOXXX|
+|XXOOOOOOO.OOOOXXX|
+|XXXOO.OOOOOOOOOXX|
+|XXXXOOOOOOXXXXXXX|
+|@XOOOOOOOOOOOXXXX|
+|@XXXOOOOOOXXXXXXX|
+|@XXXXXXXXOOXXXXXX|
+|@XXXXXXXXXXXXXXXX|
+|..@@@XXXXXXXXXXXX|
+|.....@@@@XX@@@@XX|
+|.........@@....@@|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|OOOOOOOOOOOXXXXXX|
+|OOOOOOOOOOOOXXXXX|
+|OOOOOOOOOOXXXXXXX|
+|OOOOOOOOOOOOOXXXX|
+|OOOOOOOOOOOOOOXXX|
+|XXOOOOOOOOOOOOXXX|
+|XXXOO.OOOOOOOOOXX|
+|XXXXOOOOOOXXXXXXX|
+|XXOOOOOOOOOOOXXXX|
+|XXXXOOOOOOXXXXXXX|
+|@XXXXXXXXOOXXXXXX|
+|@XXXXXXXXXXXXXXXX|
+|..@@@XXXXXXXXXXXX|
+|.....@@@@XX@@@@XX|
+|.........@@....@@|
+||
+START STRAT PLATEAU 1
+END STRAT PLATEAU 
+|OOOOOOOOOOOXXXXXX|
+|OOOOOOOOOOOOXXXXX|
+|OOOOOOOOOOXXXXXXX|
+|OOOOOOOOOOOOOXXXX|
+|OOOOOOOOOOOOOOXXX|
+|XXOOOOOOOOOOOOXXX|
+|XXXOOOOOOOOOOOOXX|
+|XXXXOOOOOOXXXXXXX|
+|XXOOOOOOOOOOOXXXX|
+|XXXXOOOOOOXXXXXXX|
+|@XXXXXXXXOOXXXXXX|
+|@XXXXXXXXXXXXXXXX|
+|..@XXXXXXXXXXXXXX|
+|...@@@@@@XX@@@@XX|
+|.........@@....@@|
+||

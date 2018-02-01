@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 16:31:06 by susivagn          #+#    #+#             */
-/*   Updated: 2018/02/01 01:39:14 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/02/01 03:37:42 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ int		if_valide(int y, int x, t_info *info)
 		return (1);
 	}
 	if (IBOARD[IY + y][IX + x] == '.' || IBOARD[IY + y][IX + x] == '@' ||
-		IBOARD[IY + y][IX + x] == '<' || IBOARD[IY + y][IX + x] == '[')
+		IBOARD[IY + y][IX + x] == '<' || IBOARD[IY + y][IX + x] == '[' || 
+		IBOARD[IY + y][IX + x] == '[')
 	{
 		SCORE += IBOARD[IY + y][IX + x];
 		return (1);
@@ -68,11 +69,13 @@ int		check_piece_pos(int x, int y, t_info *info)
 int		play_filler(int fdr, t_info *info)
 {
 	int		i;
-
+	int	y = 0;
 	i = 0;
 	init_struct(info);
 	chauffage_border(info);
 	chauffage_enemy(0, 0, info);
+	while (IBOARD[y])
+		dprintf(info->fds, "|%s|\n", IBOARD[y++]);
 	while ((IBOARD) && IBOARD[IY])
 	{
 		IX = 0;

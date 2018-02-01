@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 14:59:25 by susivagn          #+#    #+#             */
-/*   Updated: 2018/02/01 01:58:32 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/02/01 03:05:20 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,12 +44,8 @@ void	get_board(int fd, char *line, t_info *info)
 	{
 		if (ft_strstr(line, "    012"))
 			free(line);
-		else if (line[0] == '0')
-		{
-			info->board = ft_addchartable(info->board, line + 4,
-				SZBOARDY + 1);
-			i++;
-		}
+		else if (line[0] == '0' && (i += 1))
+			info->board = ft_addchartable(info->board, line + 4, SZBOARDY + 1);
 		if (i == SZBOARDY)
 		{
 			info->board = ft_addchartable(info->board,
@@ -90,8 +86,6 @@ int		filler_read(int fdr, t_info *info)
 	ret = 0;
 	while ((ret = get_next_line(0, &line)) > 0)
 	{
-		dprintf(info->fds, "RET == *%d*\n", ret);
-		dprintf(info->fds, "*%s*\n", line);
 		if (IP == 0)
 			get_player(line, info);
 		else if (ft_strstr(line, "Plateau"))
