@@ -6,19 +6,16 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/23 18:01:29 by susivagn          #+#    #+#             */
-/*   Updated: 2018/02/01 03:45:28 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/02/01 03:57:55 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./filler.h"
 
-int		chauffage_border(t_info *info)
+int		chauffage_border(t_info *info, int x, int y)
 {
-	int		y;
-	int		x;
 	char	c;
 
-	y = 0;
 	c = '<';
 	if (info->plateau != 1)
 	{
@@ -29,7 +26,8 @@ int		chauffage_border(t_info *info)
 			{
 				if ((y == 1 || y == (SZBOARDY - 2)) && (IBOARD[y][x] == '.'))
 					IBOARD[y][x] = c;
-				else if ((x == 1 || x == (SZBOARDX - 2)) && (IBOARD[y][x] == '.'))
+				else if ((x == 1 || x == (SZBOARDX - 2)) && 
+						(IBOARD[y][x] == '.'))
 					IBOARD[y][x] = c;
 				x++;
 			}
@@ -46,17 +44,14 @@ int		chauffage_map00(t_info *info, int x)
 	char	c;
 
 	c = '[';
-	dprintf(info->fds, "START STRAT PLATEAU %d\n", info->plateau);
 	while (IBOARD[8][x])
-		{
-			if (IBOARD[8][x] && IBOARD[8][x] == '.' && x > 2)
-				IBOARD[8][x] = c;
-			if (IBOARD[7][x] && IBOARD[7][x] == '.' && x > 6)
-				IBOARD[7][x] = c;
-			x++;
-		}
-	
-	dprintf(info->fds, "END STRAT PLATEAU \n");
+	{
+		if (IBOARD[8][x] && IBOARD[8][x] == '.' && x > 2)
+			IBOARD[8][x] = c;
+		if (IBOARD[7][x] && IBOARD[7][x] == '.' && x > 6)
+			IBOARD[7][x] = c;
+		x++;
+	}
 	return(0);
 }
 

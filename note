@@ -6,3 +6,5 @@ superjeannot sur map00 p1
 0>&-
 
 while 1; do clear; leaks susivagn.filler; sleep 1; done
+
+feermer entre standar 1>&-
