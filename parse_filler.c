@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 18:21:39 by susivagn          #+#    #+#             */
-/*   Updated: 2018/02/01 07:03:33 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/02/01 10:05:56 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int		main(void)
 	}
 	free_board(info, IBOARD, SZBOARDY);
 	free_tab(IPIECE, SZPIECEY);
-	ft_bzero(info, sizeof(t_info));
 	free(info);
+	get_next_line(-2, NULL);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 14:16:30 by susivagn          #+#    #+#             */
-/*   Updated: 2018/01/04 15:54:46 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/02/01 09:44:25 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,31 +20,29 @@
 # include <unistd.h>
 # include <limits.h>
 
-#define BUFF_SIZE 100
-#define NX navi->next
-#define NCF ((t_lol *)(navi)->content)->fdi
-#define BB buffer->buff
+# define BUFF_SIZE 100
+# define NX navi->next
+# define NCF ((t_lol *)(navi)->content)->fdi
+# define BB buffer->buff
 
-#include <fcntl.h>
-#include "libft.h"
-#include <stdio.h>
-
+# include <fcntl.h>
+# include "libft.h"
+# include <stdio.h>
 
 typedef struct	s_gnl
 {
-	int fdi;
-	char buff[BUFF_SIZE + 1];
-	char *tmp;
+	int		fdi;
+	char	buff[BUFF_SIZE + 1];
+	char	*tmp;
 }				t_gnl;
 
-
-typedef struct 	s_lol
+typedef struct	s_lol
 {
-	int fdi;
-	char buff[BUFF_SIZE + 1];
-} 				t_lol;
+	int		fdi;
+	char	buff[BUFF_SIZE + 1];
+}				t_lol;
 
-typedef struct s_list
+typedef struct	s_list
 {
 	void			*content;
 	size_t			content_size;
@@ -140,9 +138,9 @@ int				ft_isallsame(char *str, char a);
 int				ft_size_unicode(int c);
 int				ft_count_char(char *src, char c);
 int				ft_no_encounter_index(char *str, char *caras);
-int 			get_next_line(const int fd, char **line);
-char 			**ft_addchartable(char **table, char *toadd, int size);
-int        		**ft_addinttable(int **table, int *toadd, int size, int size2);
-int 			ft_print_table(char **table, int newline);
+int				get_next_line(const int fd, char **line);
+char			**ft_addchartable(char **table, char *toadd, int size);
+int				**ft_addinttable(int **table, int *toadd, int size, int size2);
+int				ft_print_table(char **table, int newline);
 
 #endif

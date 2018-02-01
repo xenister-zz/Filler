@@ -6,7 +6,7 @@
 #    By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/08/09 17:53:05 by susivagn          #+#    #+#              #
-#    Updated: 2018/02/01 00:09:25 by susivagn         ###   ########.fr        #
+#    Updated: 2018/02/01 08:20:51 by susivagn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -122,18 +122,19 @@ FLAGS= -Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME): $(OFILE)
-	gcc -Wall -Werror -Wextra  -g -c $(SRC)
-	ar rc $(NAME) $(OFILE)
-	ranlib $(NAME)
+	@gcc -Wall -Werror -Wextra  -g -c $(SRC)
+	@ar rc $(NAME) $(OFILE)
+	@ranlib $(NAME)
+	@echo "*** LIBFT OK ***"
 
 
 %.o: %.c
-	gcc $(FLAGS) -c -g $^
+	@gcc $(FLAGS) -c -g $^
 
 clean:
-	rm -f $(OFILE)
+	@rm -f $(OFILE)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all

@@ -6,7 +6,7 @@
 #    By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/10/18 15:52:10 by susivagn          #+#    #+#              #
-#    Updated: 2018/02/01 07:09:23 by susivagn         ###   ########.fr        #
+#    Updated: 2018/02/01 08:22:15 by susivagn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,18 +26,19 @@ FLAGS= -Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME):$(OFILE)
-	make -C LibftXen
-	gcc $(SRC) $(LIB) -o $(NAME)
+	@make -C LibftXen
+	@gcc -g $(FLAGS) $(SRC) $(LIB) -o $(NAME)
+	@echo "*** FILLER READY TOO PLAY ***"
 
 %.o: %.c
-	gcc $(FLAGS) -c $^
+	@gcc -g $(FLAGS) -c $^
 
 clean:
-	make clean -C LibftXen
-	rm -f $(OFILE)
+	@make clean -C LibftXen
+	@rm -f $(OFILE)
 
 fclean: clean
-	make fclean -C LibftXen
-	rm -f $(NAME)
+	@make fclean -C LibftXen
+	@rm -f $(NAME)
 
 re: fclean all
