@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_play_filler.c                                   :+:      :+:    :+:   */
+/*   play_filler.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 16:31:06 by susivagn          #+#    #+#             */
-/*   Updated: 2018/02/01 03:57:45 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/02/01 06:07:35 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,9 @@ int		if_valide(int y, int x, t_info *info)
 {
 	y = y - MY;
 	x = x - MX;
-	if (((IY + y) < 0) || ((IX + x) < 0) || 
-		((IY + y) > SZBOARDY) || ((IX + x) > SZBOARDX) || !(IBOARD[IY + y]) || !(IBOARD[IY + y][IX + x]))
+	if (((IY + y) < 0) || ((IX + x) < 0) ||
+		((IY + y) > SZBOARDY) || ((IX + x) > SZBOARDX) || !(IBOARD[IY + y]) ||
+		!(IBOARD[IY + y][IX + x]))
 		return (0);
 	if (IBOARD[IY + y][IX + x] == IE)
 		return (0);
@@ -28,7 +29,7 @@ int		if_valide(int y, int x, t_info *info)
 		return (1);
 	}
 	if (IBOARD[IY + y][IX + x] == '.' || IBOARD[IY + y][IX + x] == '@' ||
-		IBOARD[IY + y][IX + x] == '<' || IBOARD[IY + y][IX + x] == '[' || 
+		IBOARD[IY + y][IX + x] == '<' || IBOARD[IY + y][IX + x] == '[' ||
 		IBOARD[IY + y][IX + x] == '[')
 	{
 		SCORE += IBOARD[IY + y][IX + x];
@@ -66,16 +67,14 @@ int		check_piece_pos(int x, int y, t_info *info)
 	return (1);
 }
 
-int		play_filler(int fdr, t_info *info)
+int		play_filler(t_info *info)
 {
 	int		i;
-	int	y = 0;
+
 	i = 0;
 	init_struct(info);
 	chauffage_border(info, 0, 0);
-	chauffage_enemy(0, 0, info);
-	while (IBOARD[y])
-		dprintf(info->fds, "|%s|\n", IBOARD[y++]);
+	chauffage_enemy(info, 0, 0);
 	while ((IBOARD) && IBOARD[IY])
 	{
 		IX = 0;

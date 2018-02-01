@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_filler_read.c                                   :+:      :+:    :+:   */
+/*   filler_read.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 14:59:25 by susivagn          #+#    #+#             */
-/*   Updated: 2018/02/01 03:05:20 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/02/01 05:48:57 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ void	get_piece(int fd, char *line, t_info *info)
 	}
 }
 
-int		filler_read(int fdr, t_info *info)
+int		filler_read(t_info *info)
 {
 	int		ret;
 	char	*line;

@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/23 18:01:29 by susivagn          #+#    #+#             */
-/*   Updated: 2018/02/01 03:57:55 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/02/01 05:56:23 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int		chauffage_border(t_info *info, int x, int y)
 			{
 				if ((y == 1 || y == (SZBOARDY - 2)) && (IBOARD[y][x] == '.'))
 					IBOARD[y][x] = c;
-				else if ((x == 1 || x == (SZBOARDX - 2)) && 
+				else if ((x == 1 || x == (SZBOARDX - 2)) &&
 						(IBOARD[y][x] == '.'))
 					IBOARD[y][x] = c;
 				x++;
@@ -52,10 +52,10 @@ int		chauffage_map00(t_info *info, int x)
 			IBOARD[7][x] = c;
 		x++;
 	}
-	return(0);
+	return (0);
 }
 
-int		chauffage_enemy(int x, int y, t_info *info)
+int		chauffage_enemy(t_info *info, int x, int y)
 {
 	while ((IBOARD) && IBOARD[y])
 	{
@@ -93,7 +93,7 @@ void	free_board(t_info *info, char **tab, int size)
 	free(tab);
 }
 
-void	free_tab(t_info *info, char **tab, int size)
+void	free_tab(char **tab, int size)
 {
 	while (size >= 0)
 	{
