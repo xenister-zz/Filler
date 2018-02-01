@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 14:59:25 by susivagn          #+#    #+#             */
-/*   Updated: 2018/01/25 20:49:13 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/02/01 01:58:32 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ void	get_player(char *line, t_info *info)
 		info->player = 'X';
 		info->enemy = 'O';
 	}
+	free(line);
 }
 
 void	get_board(int fd, char *line, t_info *info)
@@ -38,9 +39,12 @@ void	get_board(int fd, char *line, t_info *info)
 	if (SZBOARDY == 15)
 		info->plateau = 1;
 	SZBOARDX = ft_atoi(&line[11]);
+	free(line);
 	while ((ret = get_next_line(fd, &line)) > 0)
 	{
-		if (line[0] == '0')
+		if (ft_strstr(line, "    012"))
+			free(line);
+		else if (line[0] == '0')
 		{
 			info->board = ft_addchartable(info->board, line + 4,
 				SZBOARDY + 1);
@@ -64,6 +68,7 @@ void	get_piece(int fd, char *line, t_info *info)
 	i = 0;
 	info->piece_sizey = ft_atoi(&line[6]);
 	info->piece_sizex = ft_atoi(&line[8]);
+	free(line);
 	while ((ret = get_next_line(fd, &line)) > 0)
 	{
 		if ((line[0] == '.') || (line[0] == '*'))
@@ -85,11 +90,13 @@ int		filler_read(int fdr, t_info *info)
 	ret = 0;
 	while ((ret = get_next_line(0, &line)) > 0)
 	{
+		dprintf(info->fds, "RET == *%d*\n", ret);
+		dprintf(info->fds, "*%s*\n", line);
 		if (IP == 0)
 			get_player(line, info);
-		if (ft_strstr(line, "Plateau"))
+		else if (ft_strstr(line, "Plateau"))
 			get_board(0, line, info);
-		if (ft_strstr(line, "Piece"))
+		else if (ft_strstr(line, "Piece"))
 		{
 			get_piece(0, line, info);
 			break ;

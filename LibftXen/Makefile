@@ -6,7 +6,7 @@
 #    By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/08/09 17:53:05 by susivagn          #+#    #+#              #
-#    Updated: 2018/01/04 14:49:50 by susivagn         ###   ########.fr        #
+#    Updated: 2018/02/01 00:09:25 by susivagn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -122,7 +122,7 @@ FLAGS= -Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME): $(OFILE)
-	gcc -Wall -Werror -Wextra -c $(SRC)
+	gcc -Wall -Werror -Wextra  -g -c $(SRC)
 	ar rc $(NAME) $(OFILE)
 	ranlib $(NAME)
 

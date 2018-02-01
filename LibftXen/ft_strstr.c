@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/09 16:02:58 by susivagn          #+#    #+#             */
-/*   Updated: 2016/11/09 16:19:34 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/02/01 00:20:07 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strstr(const char *big, const char *little)
 	{
 		d = 0;
 		t = c;
-		while (big[t] == little[d])
+		while (little[d] && big[t] == little[d])
 		{
 			t++;
 			d++;

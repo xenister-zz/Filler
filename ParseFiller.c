@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 18:21:39 by susivagn          #+#    #+#             */
-/*   Updated: 2018/01/25 20:59:45 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/02/01 01:08:42 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,20 +56,16 @@ int		main(void)
 		filler_read(info->fds, info);
 		i = play_filler(info->fds, info);
 		if (i == 2 && F_SCORE == 0)
-		{
-			free_board(info, IBOARD, SZBOARDY);
-			free_tab(info, IPIECE, SZPIECEY);
 			break ;
-		}
 		if (F_SCORE != 0)
 			ft_printf("%d %d\n", (SY - MY), (SX - MX));
-		//dprintf(info->fds, "START FREEEE+++++\n");
 		free_board(info, IBOARD, SZBOARDY);
 		free_tab(info, IPIECE, SZPIECEY);
-		//dprintf(info->fds, "END FREEEE+++++++\n");
 		IBOARD = NULL;
 		IPIECE = NULL;
 	}
+	free_board(info, IBOARD, SZBOARDY);
+	free_tab(info, IPIECE, SZPIECEY);
 	ft_bzero(info, sizeof(t_info));
 	free(info);
 	return (0);

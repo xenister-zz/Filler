@@ -6,7 +6,7 @@
 /*   By: susivagn <susivagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 16:31:06 by susivagn          #+#    #+#             */
-/*   Updated: 2018/01/25 15:09:33 by susivagn         ###   ########.fr       */
+/*   Updated: 2018/02/01 01:39:14 by susivagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ int		if_valide(int y, int x, t_info *info)
 {
 	y = y - MY;
 	x = x - MX;
-	if (!(IBOARD[IY + y]) || !(IBOARD[IY + y][IX + x]))
+	if (((IY + y) < 0) || ((IX + x) < 0) || 
+		((IY + y) > SZBOARDY) || ((IX + x) > SZBOARDX) || !(IBOARD[IY + y]) || !(IBOARD[IY + y][IX + x]))
 		return (0);
 	if (IBOARD[IY + y][IX + x] == IE)
 		return (0);
